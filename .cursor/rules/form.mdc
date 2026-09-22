@@ -1,0 +1,14 @@
+---
+alwaysApply: true
+---
+When generating or modifying any React form, always use React Hook Form.
+
+Requirements:
+- Import `useForm` from `react-hook-form`.
+- Register all inputs using the `register` function.
+- Handle validation using React Hook Form's built-in validation.
+- Use `handleSubmit` for form submission.
+- Never write forms using useState for input values unless explicitly instructed.
+
+
+If the user does not specify the form handling method, default to React Hook Form.

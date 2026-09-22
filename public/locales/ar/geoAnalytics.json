@@ -1,0 +1,40 @@
+{
+  "title": "التحليلات الجغرافية",
+  "subtitle": "التوزيع الجغرافي وتحليلات الأجهزة بناءً على الموقع",
+  "filters": {
+    "allRegions": "جميع المناطق",
+    "last24Hours": "آخر 24 ساعة",
+    "last7Days": "آخر 7 أيام",
+    "last30Days": "آخر 30 يوم",
+    "last90Days": "آخر 90 يوم"
+  },
+  "deviceDistributionMap": "خريطة توزيع الأجهزة",
+  "totalDevices": "الإجمالي",
+  "devices": "الأجهزة",
+  "data": "البيانات",
+  "growth": "نمو",
+  "decline": "انخفاض",
+  "viewMode": "وضع العرض",
+  "heatmap": "خريطة الحرارة",
+  "clusters": "التجمعات",
+  "exportMap": "تصدير الخريطة",
+  "refresh": "تحديث",
+  "online": "متصل",
+  "offline": "غير متصل",
+  "regions": {
+    "northAmerica": "أمريكا الشمالية",
+    "asia": "آسيا",
+    "europe": "أوروبا",
+    "australia": "أستراليا",
+    "others": "أخرى"
+  },
+  "locationBasedPerformance": "الأداء بناءً على الموقع",
+  "tableHeaders": {
+    "region": "المنطقة",
+    "avgResponseTime": "متوسط وقت الاستجابة",
+    "uptime": "وقت التشغيل",
+    "dataQuality": "جودة البيانات",
+    "alertRate": "معدل التنبيه",
+    "status": "الحالة"
+  }
+}

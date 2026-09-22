@@ -1,0 +1,40 @@
+{
+  "title": "Geo Analytics",
+  "subtitle": "Geographic distribution and location-based device analytics",
+  "filters": {
+    "allRegions": "All Regions",
+    "last24Hours": "Last 24 hours",
+    "last7Days": "Last 7 days",
+    "last30Days": "Last 30 days",
+    "last90Days": "Last 90 days"
+  },
+  "deviceDistributionMap": "Device Distribution Map",
+  "totalDevices": "Total",
+  "devices": "Devices",
+  "data": "Data",
+  "growth": "growth",
+  "decline": "decline",
+  "viewMode": "View Mode",
+  "heatmap": "Heatmap",
+  "clusters": "Clusters",
+  "exportMap": "Export Map",
+  "refresh": "Refresh",
+  "online": "Online",
+  "offline": "Offline",
+  "regions": {
+    "northAmerica": "North America",
+    "asia": "Asia",
+    "europe": "Europe",
+    "australia": "Australia",
+    "others": "Others"
+  },
+  "locationBasedPerformance": "Location-Based Performance",
+  "tableHeaders": {
+    "region": "REGION",
+    "avgResponseTime": "AVG RESPONSE TIME",
+    "uptime": "UPTIME",
+    "dataQuality": "DATA QUALITY",
+    "alertRate": "ALERT RATE",
+    "status": "STATUS"
+  }
+}

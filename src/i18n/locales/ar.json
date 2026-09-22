@@ -1,0 +1,2591 @@
+{
+  "common": {
+    "welcome": "مرحباً",
+    "loading": "جاري التحميل...",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "create": "إنشاء",
+    "search": "بحث",
+    "filter": "تصفية",
+    "export": "تصدير",
+    "import": "استيراد",
+    "refresh": "تحديث",
+    "view": "عرض",
+    "copy": "نسخ",
+    "actions": "الإجراءات",
+    "status": "الحالة",
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "name": "الاسم",
+    "type": "النوع",
+    "description": "الوصف",
+    "createdAt": "تاريخ الإنشاء",
+    "updatedAt": "تاريخ التحديث",
+    "yes": "نعم",
+    "no": "لا",
+    "confirm": "تأكيد",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "submit": "إرسال",
+    "close": "إغلاق",
+    "currentPlan": "الخطة الحالية",
+    "nextBilling": "الفاتورة القادمة",
+    "settings": "الإعدادات",
+    "logout": "تسجيل الخروج",
+    "profile": "الملف الشخصي",
+    "updateYourProfile": "تحديث معلومات الملف الشخصي",
+    "phoneNumber": "رقم الهاتف",
+    "invalidPhone": "رقم هاتف غير صالح",
+    "invalidEmail": "بريد إلكتروني غير صالح",
+    "saving": "جاري الحفظ...",
+    "saved": "تم الحفظ",
+    "somethingWentWrong": "حدث خطأ ما",
+    "email": "البريد الإلكتروني",
+    "emailNotEditable": "البريد الإلكتروني لا يمكن تعديله.",
+    "emailRequired": "البريد الإلكتروني مطلوب",
+    "emailInvalid": "البريد الإلكتروني غير صالح",
+    "phone": "رقم الهاتف",
+    "phonePlaceholder": "أدخل رقم الهاتف",
+    "phoneRequired": "رقم الهاتف مطلوب",
+    "phoneInvalid": "رقم الهاتف غير صالح",
+    "signup": "تسجيل جديد",
+    "companyName": "اسم الشركة",
+    "failedToLoadSettings": "فشل تحميل الإعدادات",
+    "noResults": "لم يتم العثور على نتائج",
+    "deleteConfirmation": {
+      "title": "حذف العنصر",
+      "confirm": "حذف",
+      "cancel": "إلغاء",
+      "description": "هل أنت متأكد أنك تريد حذف \"{{itemName}}\"؟ لا يمكن التراجع عن هذا الإجراء.",
+      "descriptionGeneric": "هل أنت متأكد أنك تريد حذف هذا العنصر؟ لا يمكن التراجع عن هذا الإجراء.",
+      "deleting": "جاري الحذف..."
+    },
+    "never": "لا ينتهي أبداً",
+    "time": {
+      "oneHour": "ساعة واحدة",
+      "oneDay": "يوم واحد",
+      "sevenDays": "7 أيام",
+      "thirtyDays": "30 يوماً",
+      "customDate": "تاريخ مخصص"
+    }
+  },
+  "pagination": {
+    "showing": "عرض",
+    "to": "إلى",
+    "of": "من",
+    "results": "نتيجة",
+    "page": "صفحة",
+    "firstPage": "الصفحة الأولى",
+    "previousPage": "الصفحة السابقة",
+    "nextPage": "الصفحة التالية",
+    "lastPage": "الصفحة الأخيرة"
+  },
+  "nav": {
+    "overview": "نظرة عامة",
+    "dashboard": "لوحة التحكم",
+    "solutionTemplates": "قوالب الحلول",
+    "solutionDashboards": "لوحات معلومات الحلول",
+    "profiles": "الملفات الشخصية",
+    "deviceProfiles": "ملفات الأجهزة",
+    "assetProfiles": "ملفات الأصول",
+    "objects": "الكائنات",
+    "devices": "الأجهزة",
+    "assets": "الأصول",
+    "floorPlans": "مخططات الطوابق",
+    "viewFloorPlans": "عرض مخططات الطوابق",
+    "multiFloorBuildingView": "عرض مبنى متعدد الطوابق",
+    "history": "السجل",
+    "alertConfiguration": "تكوين التنبيهات",
+    "alerts": "التنبيهات",
+    "alarms": "التنبيهات",
+    "alertDetails": "تفاصيل التنبيه",
+    "analytics": "التحليلات",
+    "reportTemplates": "قوالب التقارير",
+    "customerUserAssociation": "تربيط العملاء والمستخدمين",
+    "searchResults": "نتائج البحث",
+    "customerAdministrator": "مدير العملاء",
+    "deviceAnalytics": "التحليلات الأجهزة",
+    "users": "المستخدمون والأدوار",
+    "usersAndRoles": "المستخدمون والأدوار",
+    "automation": "الأتمتة",
+    "integrations": "التكاملات",
+    "integrationDashboard": "لوحة معلومات مركز التكامل",
+    "edgeManagementCenter": "مركز إدارة الحافة",
+    "scheduleManagement": "إدارة الجدولة",
+    "resources": "الموارد",
+    "widgetsBundle": "حزمة الأدوات",
+    "hierarchyChart": "رسم تخطيطي للهرم",
+    "widgets": "الأدوات",
+    "widgetTypes": "أنواع الأدوات",
+    "imageLibrary": "مكتبة الصور",
+    "javascriptLibrary": "مكتبة JavaScript",
+    "notifications": "الإشعارات",
+    "sharingCenter": "مركز المشاركة",
+    "apiMonitoring": "مراقبة API",
+    "apiMonitoringOverview": "نظرة عامة على المراقبة",
+    "requestAnalytics": "تحليلات الطلبات",
+    "performanceMetrics": "مقاييس الأداء",
+    "auditLogs": "سجلات التدقيق",
+    "errorAnalysis": "تحليل الأخطاء",
+    "rateLimitingDashboard": "لوحة تحكم تحديد المعدل",
+    "audit": "التدقيق",
+    "activity": "النشاط",
+    "subscriptionPlans": "خطط الاشتراك",
+    "invoices": "الفواتير",
+    "subscription": "الاشتراك",
+    "plans": "الخطط",
+    "subscriptions": {
+      "invoices": {
+        "title": "سجل الفواتير",
+        "subtitle": "عرض وتنزيل فواتيرك وإيصالاتك السابقة.",
+        "table": {
+          "number": "رقم الفاتورة",
+          "plan": "الخطة",
+          "date": "التاريخ",
+          "amount": "المبلغ",
+          "status": "الحالة",
+          "actions": "الإجراءات"
+        },
+        "status": {
+          "paid": "مدفوع",
+          "pending": "قيد الانتظار",
+          "failed": "فاشل"
+        },
+        "actions": {
+          "downloadInvoice": "فاتورة",
+          "downloadReceipt": "إيصال"
+        },
+        "found": "تم العثور على {{count}} فاتورة",
+        "noHistory": "لا يوجد سجل فواتير متاح بعد.",
+        "failedToLoad": "فشل تحميل سجل الفواتير"
+      }
+    },
+    "settings": "الإعدادات",
+    "smartLifeIoTPlatform": "منصة Smart Life IoT",
+    "version": "الإصدار 1.0.0"
+  },
+  "mainDashboard": {
+    "title": "لوحة المعلومات الرئيسية",
+    "actions": {
+      "setting": "الإعدادات",
+      "edit": "تعديل",
+      "share": "مشاركة"
+    },
+    "sections": {
+      "temperatureTrend": "اتجاه درجة الحرارة",
+      "humidityLevel": "مستوى الرطوبة",
+      "powerConsumption": "استهلاك الطاقة",
+      "systemStatus": "حالة النظام"
+    },
+    "status": {
+      "online": "متصل",
+      "offline": "غير متصل"
+    },
+    "tooltip": {
+      "total": "الإجمالي"
+    }
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "overview": "نظرة عامة",
+    "description": " مراقبة منصة إنترنت الأشياء الخاصة بك في الوقت الفعلي",
+    "systemOverview": "نظرة عامة على النظام",
+    "totalDevices": "إجمالي الأجهزة",
+    "activeDevices": "الأجهزة النشطة",
+    "totalAlarms": "إجمالي التنبيهات",
+    "criticalAlarms": "التنبيهات الحرجة",
+    "recentActivity": "النشاط الأخير",
+    "systemHealth": "صحة النظام",
+    "storageAndAssets": "التخزين والأصول",
+    "storage": "التخزين",
+    "assets": "الأصول",
+    "customers": "العملاء",
+    "floorPlans": "مخططات الطوابق",
+    "automations": "الأتمتة",
+    "projectsLocations": "مواقع المشاريع",
+    "activeDashboards": "لوحات التحكم النشطة",
+    "quickActions": "إجراءات سريعة",
+    "solutionCategories": {
+      "smartCity": "المدينة الذكية",
+      "smartAgriculture": "الزراعة الذكية",
+      "smartBuilding": "المبنى الذكي",
+      "smartTransportation": "النقل الذكي",
+      "smartHome": "المنزل الذكي",
+      "smartFactory": "المصنع الذكي"
+    },
+    "activeSolutions": "الحلول النشطة",
+    "viewAll": "عرض الكل",
+    "pendingTasks": "المهام المعلقة",
+    "viewTasks": "عرض المهام",
+    "tasks": {
+      "addGateway": "إضافة بوابة",
+      "configureAlert": "تكوين التنبيه"
+    },
+    "priorities": {
+      "high": "عالي",
+      "medium": "متوسط",
+      "low": "منخفض"
+    },
+    "connectedDevices": "الأجهزة المتصلة",
+    "connections": "{{count}} اتصالات",
+    "addNewDevice": "إضافة جهاز جديد",
+    "deviceUsage": {
+      "used": "مستخدم",
+      "remaining": "متبقي"
+    },
+    "billingStatus": "حالة الفواتير",
+    "nextBilling": "الفاتورة القادمة: {{date}}",
+    "currentPlan": "الخطة الحالية: {{plan}}",
+    "totalUsers": "إجمالي المستخدمين",
+    "users": "{{count}} مستخدمين",
+    "manageUsers": "إدارة المستخدمين",
+    "usageSummary": "ملخص الاستخدام",
+    "devices": "الأجهزة",
+    "dashboards": "لوحات المعلومات",
+    "recentlyAccessedDashboards": "لوحات المعلومات التي تم الوصول إليها مؤخراً",
+    "dashboardPreview": "معاينة لوحة المعلومات",
+    "dashboardSubtitles": {
+      "smartBuildingOverview": "نظرة عامة على المبنى الذكي",
+      "smartBuildingMetrics": "مقاييس المبنى الذكي",
+      "smartHomeControl": "التحكم في المنزل الذكي"
+    },
+    "liveUpdates": "تحديثات مباشرة",
+    "lastUpdate": "آخر تحديث: {{time}}",
+    "waiting": "في الانتظار...",
+    "stats": {
+      "activeCount": "{{count}} نشط",
+      "totalCount": "{{count}} إجمالي",
+      "onlineCount": "● {{count}} متصل",
+      "offlineCount": "● {{count}} غير متصل",
+      "usersCount": "{{count}} مستخدمين"
+    },
+    "realtimeActivity": "النشاط في الوقت الحقيقي",
+    "activities": {
+      "wentOnline": "أصبح الجهاز متصلاً",
+      "wentOffline": "أصبح الجهاز غير متصل",
+      "telemetry": "درجة الحرارة: {{temp}}°C، الرطوبة: {{hum}}%"
+    }
+  },
+  "solutionDashboards": {
+    "title": "لوحات معلومات الحلول",
+    "createNewDashboard": "إنشاء لوحة معلومات جديدة",
+    "search": "بحث",
+    "showCustomerDashboards": "عرض لوحات معلومات العملاء",
+    "importDashboard": "استيراد لوحة معلومات",
+    "dashboardFile": "ملف لوحة المعلومات",
+    "dropFilesHere": "اسحب الملفات هنا أو انقر للتصفح",
+    "supportedFormats": "الصيغ المدعومة: JSON (الحد الأقصى 5 ميجابايت)",
+    "browse": "تصفح",
+    "selectedFile": "المحدد",
+    "noFileSelected": "لم يتم تحديد ملف",
+    "cancel": "إلغاء",
+    "import": "استيراد",
+    "tabs": {
+      "all": "الكل",
+      "group": "مجموعة"
+    },
+    "table": {
+      "title": "العنوان",
+      "createdTime": "وقت الإنشاء",
+      "activateDeactivate": "تفعيل/ إلغاء التفعيل",
+      "customerName": "اسم العميل",
+      "actions": "الإجراءات"
+    },
+    "status": {
+      "active": "نشط",
+      "deactivate": "إلغاء التفعيل"
+    },
+    "tags": {
+      "city": "مدينة",
+      "energy": "طاقة",
+      "transport": "نقل"
+    }
+  },
+  "createDashboard": {
+    "title": "إنشاء لوحة معلومات جديدة",
+    "dashboardTitle": "عنوان لوحة المعلومات",
+    "dashboardTitlePlaceholder": "أدخل عنوان لوحة المعلومات",
+    "description": "الوصف",
+    "descriptionPlaceholder": "أدخل وصف لوحة المعلومات",
+    "ownerAndGroups": "المالك والمجموعات",
+    "owner": "المالك",
+    "ownerPlaceholder": "اكتب اسم المالك واضغط Enter",
+    "groups": "المجموعات",
+    "groupsPlaceholder": "اكتب اسم المجموعة واضغط Enter",
+    "dashboardImage": "صورة لوحة المعلومات",
+    "dropImageOrClick": "اسحب الصورة هنا أو انقر للتحميل",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "titleRequired": "عنوان لوحة المعلومات مطلوب",
+    "ownerRequired": "المالك مطلوب",
+    "invalidImageType": "يرجى اختيار ملف صورة",
+    "success": "تم إنشاء لوحة المعلومات بنجاح",
+    "error": "فشل إنشاء لوحة المعلومات",
+    "existingDashboards": "لوحات المعلومات الموجودة",
+    "noDashboards": "لم يتم العثور على لوحات معلومات",
+    "showing": "عرض",
+    "to": "إلى",
+    "of": "من",
+    "results": "نتيجة",
+    "page": "صفحة"
+  },
+  "createGroup": {
+    "title": "إنشاء مجموعة جديدة",
+    "groupTitle": "عنوان المجموعة",
+    "groupTitlePlaceholder": "أدخل عنوان المجموعة",
+    "description": "الوصف",
+    "descriptionPlaceholder": "أدخل الوصف",
+    "shareGroup": "مشاركة المجموعة",
+    "shareGroupPlaceholder": "أدخل تفاصيل مشاركة المجموعة",
+    "customer": "العميل",
+    "allUser": "جميع المستخدمين",
+    "selectUserGroup": "اختر مجموعة المستخدمين",
+    "userGroupPlaceholder": "أدخل مجموعة المستخدمين",
+    "userGroupRequired": "مجموعة المستخدمين المستهدفة مطلوبة*",
+    "permissions": "الأذونات",
+    "read": "قراءة",
+    "write": "كتابة",
+    "other": "أخرى",
+    "roles": "الأدوار",
+    "rolesPlaceholder": "أدخل الأدوار",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "success": "تم إنشاء المجموعة بنجاح",
+    "error": "فشل إنشاء المجموعة"
+  },
+  "solutionTemplates": {
+    "title": "قوالب الحلول",
+    "searchPlaceholder": "بحث",
+    "createNewTemplate": "إنشاء قالب جديد",
+    "popularDomain": "المجالات الشائعة",
+    "templates": "القوالب",
+    "templatesCount": "{{count}} قالب",
+    "preview": "معاينة",
+    "activated": "مفعّل",
+    "activate": "تفعيل",
+    "noTemplatesFound": "لا توجد قوالب",
+    "tryAdjustingSearch": "حاول تعديل معايير البحث أو التصفية",
+    "clearFilters": "مسح المرشحات",
+    "categories": {
+      "all": "الكل",
+      "smartCity": "المدينة الذكية",
+      "smartAgriculture": "الزراعة الذكية",
+      "smartBuilding": "المبنى الذكي",
+      "smartTransportation": "النقل الذكي",
+      "smartHome": "المنزل الذكي",
+      "smartFactory": "المصنع الذكي",
+      "healthcare": "الرعاية الصحية",
+      "energy": "الطاقة",
+      "retail": "التجارة",
+      "logistics": "اللوجستيات",
+      "water": "المياه",
+      "climate": "المناخ",
+      "education": "التعليم"
+    },
+    "templatePreview": {
+      "title": "معاينة قالب المدينة الذكية",
+      "dashboardTitle": "لوحة معلومات المدينة الذكية",
+      "trafficFlow": "تدفق المرور",
+      "energyConsumption": "استهلاك الطاقة",
+      "wasteCollection": "جمع النفايات",
+      "cityMap": "خريطة المدينة",
+      "roadTrafficStatus": "حالة مرور الطرق",
+      "chartLabels": {
+        "collected": "مجمّع",
+        "remaining": "متبقي",
+        "active": "نشط",
+        "free": "حر"
+      },
+      "cancel": "إلغاء",
+      "activateTemplate": "تفعيل القالب"
+    }
+  },
+  "createTemplate": {
+    "title": "إنشاء قالب جديد",
+    "templateTitle": "عنوان القالب",
+    "templateTitlePlaceholder": "أدخل عنوان القالب",
+    "description": "الوصف",
+    "descriptionPlaceholder": "أدخل وصف القالب",
+    "templateImage": "صورة القالب",
+    "dropImageOrClick": "قم بإسقاط الصورة هنا أو انقر للتحميل",
+    "settingsVisibility": "الإعدادات (الظهور)",
+    "selectVisibility": "اختر الظهور",
+    "visibility": {
+      "public": "عام",
+      "private": "خاص",
+      "shared": "مشترك"
+    },
+    "defaultState": "الحالة الافتراضية",
+    "selectDefaultState": "اختر الحالة الافتراضية",
+    "states": {
+      "fullScreen": "ملء الشاشة",
+      "windowed": "نافذة",
+      "minimized": "مصغّر"
+    },
+    "autoRefresh": "التحديث التلقائي",
+    "selectRefreshInterval": "اختر فترة التحديث",
+    "refreshIntervals": {
+      "disabled": "معطّل",
+      "every1Minute": "كل دقيقة",
+      "every5Minutes": "كل 5 دقائق",
+      "every10Minutes": "كل 10 دقائق",
+      "every30Minutes": "كل 30 دقيقة",
+      "every1Hour": "كل ساعة"
+    },
+    "defaultTimeWindow": "النافذة الزمنية الافتراضية",
+    "selectTimeWindow": "اختر النافذة الزمنية",
+    "timeWindows": {
+      "last1Hour": "آخر ساعة",
+      "last6Hours": "آخر 6 ساعات",
+      "last24Hours": "آخر 24 ساعة",
+      "last7Days": "آخر 7 أيام",
+      "last30Days": "آخر 30 يوم",
+      "lastYear": "آخر سنة"
+    },
+    "cancel": "إلغاء",
+    "save": "حفظ"
+  },
+  "widgets": {
+    "title": "الأدوات",
+    "addWidget": "إضافة أداة",
+    "widgetLibrary": "مكتبة الأدوات",
+    "lineChartWidget": "أداة المخطط الخطي",
+    "resourcesWidgetsLibrary": "الموارد > مكتبة الأدوات",
+    "map": "الخريطة",
+    "geographicMapWidget": "أداة الخريطة الجغرافية",
+    "filters": {
+      "all": "الكل",
+      "lineChart": "مخطط خطي",
+      "timeSeries": "السلسلة الزمنية",
+      "controls": "عناصر التحكم"
+    },
+    "chartLabels": {
+      "used": "مستخدم",
+      "remaining": "متبقي"
+    }
+  },
+  "mainControlPanel": {
+    "title": "لوحة التحكم الرئيسية",
+    "tabs": {
+      "dashboard": "لوحة التحكم",
+      "edit": "تعديل",
+      "settings": "الإعدادات",
+      "api": "واجهة برمجة التطبيقات"
+    },
+    "actions": {
+      "export": "تصدير",
+      "share": "مشاركة",
+      "delete": "حذف"
+    },
+    "widgets": {
+      "temperatureTrend": "اتجاه درجة الحرارة",
+      "humidityLevel": "مستوى الرطوبة",
+      "deviceStatus": "حالة الجهاز",
+      "energyConsumption": "جدول استهلاك الطاقة",
+      "alerts": "التنبيهات"
+    },
+    "status": {
+      "online": "متصل",
+      "uptime": "وقت التشغيل",
+      "lastPing": "آخر ping",
+      "status": "الحالة",
+      "normal": "طبيعي"
+    },
+    "tooltip": {
+      "total": "الإجمالي"
+    }
+  },
+  "widgetConfiguration": {
+    "title": "تكوين الأداة",
+    "subtitle": "تكوين الأداة: {{widgetName}}",
+    "tabs": {
+      "data": "البيانات",
+      "settings": "الإعدادات",
+      "layout": "التخطيط",
+      "advanced": "متقدم"
+    },
+    "dataSource": {
+      "title": "مصدر البيانات",
+      "dataSource": "مصدر البيانات",
+      "entity": "الكيان",
+      "timeWindow": "النافذة الزمنية",
+      "options": {
+        "temperatureSensor": "مستشعر درجة الحرارة",
+        "humiditySensor": "مستشعر الرطوبة",
+        "pressureSensor": "مستشعر الضغط",
+        "thermostat001": "منظم الحرارة 001",
+        "thermostat002": "منظم الحرارة 002",
+        "thermostat003": "منظم الحرارة 003"
+      },
+      "timeWindows": {
+        "last1Hour": "آخر ساعة",
+        "last6Hours": "آخر 6 ساعات",
+        "last24Hours": "آخر 24 ساعة",
+        "last7Days": "آخر 7 أيام"
+      }
+    },
+    "keyProperties": {
+      "title": "الخصائص الرئيسية",
+      "parameter": "المعامل",
+      "label": "التسمية"
+    },
+    "settings": {
+      "title": "الإعدادات",
+      "comingSoon": "تكوين الإعدادات قريباً..."
+    },
+    "layout": {
+      "title": "التخطيط",
+      "comingSoon": "تكوين التخطيط قريباً..."
+    },
+    "advanced": {
+      "title": "متقدم",
+      "comingSoon": "التكوين المتقدم قريباً..."
+    },
+    "preview": {
+      "title": "معاينة",
+      "tooltip": {
+        "total": "الإجمالي"
+      }
+    },
+    "actions": {
+      "cancel": "إلغاء",
+      "save": "حفظ"
+    }
+  },
+  "floorplans": {
+    "title": "الخرائط الأرضية",
+    "subtitle": "إدارة ومراقبة كل الخرائط الأرضية",
+    "floorMaps": "الخرائط الأرضية",
+    "totalFloorPlans": "إجمالي الخرائط الأرضية",
+    "floorPlansCount": "{{count}} خريطة أرضية",
+    "activeFloorPlans": "الخرائط الأرضية النشطة",
+    "inactiveFloorPlans": "الخرائط الأرضية المعطلة",
+    "uploadFloorPlan": "رفع خريطة أرضية",
+    "facilityLayouts": "التخطيطات المرافقية",
+    "activePlans": "الخرائط الأرضية النشطة",
+    "inUse": "في الاستخدام",
+    "totalDevices": "إجمالي الأجهزة",
+    "mappedDevices": "الأجهزة المخصصة",
+    "totalZones": "إجمالي المناطق",
+    "definedAreas": "المناطق المعرفة",
+    "quickActions": "الإجراءات السريعة",
+    "uploadFloorPlanDescription": "رفع خريطة أرضية وتكوين الإعدادات",
+    "floorPlanName": "اسم الخريطة الأرضية",
+    "floorPlanNamePlaceholder": "مثال: طابق المصنع - منطقة الإنتاج",
+    "building": "المبنى",
+    "buildingPlaceholder": "مثال: مصنع الإنتاج A",
+    "floor": "الطابق",
+    "floorPlaceholder": "مثال: الطابق الأرضي",
+    "category": "الفئة",
+    "categoryPlaceholder": "اختر الفئة",
+    "floorPlanImage": "صورة الخريطة الأرضية",
+    "clickToUploadOrDragAndDrop": "انقر للتحميل أو اسحب وأفلت",
+    "pngJpgSvgUpTo10Mb": "PNG, JPG, SVG حتى 10MB",
+    "width": "العرض",
+    "height": "الارتفاع",
+    "scale": "المقياس",
+    "description": "الوصف",
+    "floorPlanDescriptionPlaceholder": "وصف الخريطة الأرضية...",
+    "cancel": "إلغاء",
+    "export": "تصدير",
+    "editPlan": "تعديل الخريطة الأرضية",
+    "close": "إغلاق",
+    "view": "معاينة",
+    "edit": "تعديل",
+    "devices": "الأجهزة",
+    "zones": "المناطق",
+    "heatMap": "خريطة الحرارة",
+    "grid": "شبكة",
+    "fullscreen": "ملء الشاشة",
+    "zoneA": "منطقة A",
+    "production": "الإنتاج",
+    "zoneB": "منطقة B",
+    "storage": "التخزين",
+    "online": "متصل",
+    "warning": "تحذير",
+    "offline": "غير متصل",
+    "sensor": "المستشعر",
+    "meter": "العداد",
+    "dimensions": "الأبعاد",
+    "lastModified": "آخر تعديل",
+    "copy": "نسخ",
+    "delete": "حذف",
+    "status": "الحالة",
+    "createNew": "جديد",
+    "uploadBuildingPlans": "رفع تخطيطات المبنى",
+    "device": "جهاز",
+    "deviceManagement": "إدارة الأجهزة",
+    "manageDeviceAssociations": "إدارة العلاقات بين الأجهزة",
+    "analytics": "التحليلات",
+    "importDWG": "استيراد DWG",
+    "settings": {
+      "title": "إعدادات وتكوين خريطة الطابق",
+      "generalSettings": "الإعدادات العامة",
+      "measurementUnits": "وحدات القياس",
+      "metric": "متري (م)",
+      "imperial": "إمبراطوري (قدم)",
+      "enableAutoSave": "تفعيل الحفظ التلقائي",
+      "interval": "الفترة: {{minutes}} دقيقة",
+      "gridSettings": "إعدادات الشبكة",
+      "showGrid": "إظهار الشبكة",
+      "snapToGrid": "الالتصاق بالشبكة",
+      "gridSize": "حجم الشبكة: {{size}}{{unit}}",
+      "cancel": "إلغاء",
+      "resetDefault": "إعادة تعيين الافتراضي",
+      "applyChanges": "تطبيق التغييرات",
+      "settingsAppliedSuccessfully": "تم تطبيق الإعدادات بنجاح",
+      "failedToApplySettings": "فشل تطبيق الإعدادات",
+      "settingsResetToDefaults": "تم إعادة تعيين الإعدادات إلى الافتراضية"
+    },
+    "create": {
+      "title": "ميزات خريطة الطابق المتقدمة",
+      "stepTitle": "إنشاء خريطة الطابق - الخطوة {{current}} من {{total}}",
+      "stepAsset": "الأصل",
+      "stepDwgImport": "استيراد DWG",
+      "stepZoneSetup": "إعداد المنطقة",
+      "stepDeviceLink": "ربط الجهاز",
+      "step3dView": "عرض ثلاثي الأبعاد"
+    },
+    "history": {
+      "title": "تاريخ وإصدارات خريطة الطابق - {{building}}",
+      "currentVersion": "الإصدار الحالي",
+      "version": "الإصدار {{version}}",
+      "versionHistory": "تاريخ الإصدارات",
+      "selectAll": "تحديد الكل",
+      "modified": "تم التعديل: {{date}} بواسطة {{user}}",
+      "changes": "التغييرات: {{changes}}",
+      "exportHistory": "تصدير التاريخ",
+      "deleteSelected": "حذف المحدد",
+      "compare": "مقارنة",
+      "totalVersions": "إجمالي الإصدارات: {{total}} | نشط: {{active}}",
+      "pleaseSelectTwoVersions": "يرجى تحديد إصدارين بالضبط للمقارنة"
+    }
+  },
+  "devices": {
+    "title": "الأجهزة",
+    "subtitle": "إدارة ومراقبة كل أجهزة الإنترنت الذكية",
+    "addDevice": "إضافة جهاز",
+    "totalDevices": "إجمالي الأجهزة",
+    "allDevices": "جميع الأجهزة",
+    "devicesCount": "{{count}} جهاز",
+    "editDevice": "تعديل الجهاز",
+    "deleteDevice": "حذف الجهاز",
+    "deviceName": "اسم الجهاز",
+    "deviceType": "نوع الجهاز",
+    "deviceProfile": "ملف الجهاز",
+    "manufacturer": "الشركة المصنعة",
+    "selectManufacturer": "اختر الشركة المصنعة",
+    "modelNumber": "رقم الموديل",
+    "selectModelNumber": "اختر رقم الموديل",
+    "lastActivity": "آخر نشاط",
+    "telemetry": "القياسات عن بعد",
+    "attributes": "الخصائص",
+    "noDevices": "لا توجد أجهزة",
+    "connectionType": "الاتصال",
+    "searchDevices": "البحث عن الأجهزة...",
+    "table": {
+      "name": "الاسم",
+      "createdTime": "وقت الإنشاء",
+      "status": "الحالة",
+      "customer": "اسم العميل",
+      "actions": "الإجراءات"
+    },
+    "form": {
+      "addDescription": "أضف جهازًا جديدًا إلى منصة إنترنت الأشياء الخاصة بك",
+      "editDescription": "تحديث معلومات الجهاز",
+      "namePlaceholder": "أدخل اسم الجهاز",
+      "selectType": "اختر النوع",
+      "types": {
+        "sensor": "مستشعر",
+        "actuator": "مشغل",
+        "gateway": "بوابة",
+        "controller": "تحكم",
+        "camera": "كاميرا",
+        "tracker": "متتبع"
+      },
+      "selectConnectionType": "اختر نوع الاتصال",
+      "connections": {
+        "wifi": "واي فاي",
+        "ethernet": "إيثرنت",
+        "bluetooth": "بلوتوث",
+        "cellular": "خلوي",
+        "zigbee": "زيجبي",
+        "lora": "لورا"
+      },
+      "description": "الوصف",
+      "descriptionPlaceholder": "وصف الجهاز (اختياري)",
+      "gatewayAssignment": "تعيين البوابة",
+      "selectGatewayPlaceholder": "اختر البوابة (معطل)",
+      "gateways": {
+        "gateway1": "البوابة 1",
+        "gateway2": "البوابة 2",
+        "gateway3": "البوابة 3"
+      }
+    },
+    "credentials": {
+      "title": "أوراق اعتماد الجهاز",
+      "description": "يرجى نسخ أوراق الاعتماد هذه الآن. لأسباب أمنية، لن يتم عرض رمز الوصول مرة أخرى.",
+      "tabs": {
+        "credentials": "أوراق الاعتماد",
+        "setup": "إعداد",
+        "examples": "أمثلة"
+      },
+      "fields": {
+        "deviceKey": "مفتاح الجهاز",
+        "accessToken": "رمز الوصول",
+        "mqttBroker": "وسيط MQTT",
+        "telemetryTopic": "موضوع القياس عن بعد",
+        "gatewayConfig": "تكوين البوابة",
+        "clientId": "معرف العميل:",
+        "username": "اسم المستخدم:",
+        "host": "المضيف:",
+        "instructions": "التعليمات"
+      },
+      "actions": {
+        "copy": "نسخ",
+        "copied": "تم النسخ",
+        "done": "تم"
+      }
+    },
+    "messages": {
+      "createSuccess": "تم إنشاء الجهاز بنجاح",
+      "createError": "فشل في إنشاء الجهاز",
+      "updateSuccess": "تم تحديث الجهاز بنجاح",
+      "updateError": "فشل في تحديث الجهاز",
+      "deleteSuccess": "تم حذف الجهاز بنجاح",
+      "deleteError": "فشل في حذف الجهاز"
+    },
+    "tooltips": {
+      "view": "عرض الجهاز",
+      "edit": "تعديل الجهاز",
+      "delete": "حذف الجهاز"
+    },
+    "status": {
+      "active": "نشط",
+      "inactive": "غير نشط"
+    },
+    "details": {
+      "fallbackTitle": "تفاصيل الجهاز",
+      "subtitle": "إدارة قوالب تكوين الأصول والتسلسلات الهرمية.",
+      "statusActive": "نشط",
+      "statusInactive": "غير نشط",
+      "export": "تصدير",
+      "import": "استيراد",
+      "add": "إضافة",
+      "tabs": {
+        "details": "التفاصيل",
+        "attributes": "الخصائص",
+        "telemetry": "القياسات عن بعد",
+        "alarms": "التنبيهات",
+        "relations": "العلاقات"
+      },
+      "general": {
+        "title": "الإعدادات العامة",
+        "sectionDevice": "تفاصيل الجهاز",
+        "name": "اسم الجهاز",
+        "namePlaceholder": "أدخل اسم الجهاز",
+        "label": "ملصق الجهاز",
+        "labelPlaceholder": "أدخل ملصق الجهاز",
+        "type": "نوع الجهاز",
+        "typePlaceholder": "اختر نوع الجهاز",
+        "profile": "ملف تعريف الجهاز",
+        "profilePlaceholder": "اختر ملف تعريف الجهاز",
+        "description": "الوصف",
+        "descriptionPlaceholder": "أدخل وصف للجهاز",
+        "sectionLocation": "إعدادات الموقع",
+        "building": "المبنى",
+        "buildingPlaceholder": "اختر المبنى",
+        "floor": "الطابق",
+        "floorPlaceholder": "اختر الطابق",
+        "room": "الغرفة",
+        "roomPlaceholder": "اختر الغرفة",
+        "gpsCoordinates": "إحداثيات GPS",
+        "latitudePlaceholder": "خط العرض (مثلاً 40.7128)",
+        "longitudePlaceholder": "خط الطول (مثلاً -74.0060)",
+        "cancel": "إلغاء",
+        "saveChanges": "حفظ التغييرات",
+        "messages": {
+          "success": "تم حفظ إعدادات الجهاز بنجاح",
+          "error": "فشل في حفظ إعدادات الجهاز",
+          "cancelled": "تم إلغاء التغييرات"
+        }
+      },
+      "attributes": {
+        "title": "خصائص الجهاز",
+        "subtitle": "بيانات تعريف النظام وخصائص الجهاز المبلغ عنها",
+        "countSuffix": "خصائص",
+        "refresh": "تحديث",
+        "error": "فشل في تحميل بيانات الخصائص.",
+        "noData": "لم يتم الإبلاغ عن أي خصائص لهذا الجهاز بعد.",
+        "systemBadge": "النظام",
+        "lastHeartbeat": "آخر نبض للقلب:",
+        "id": "المعرف:"
+      },
+      "telemetry": {
+        "searchPlaceholder": "البحث في الخصائص...",
+        "scopes": {
+          "server": "من الخادم",
+          "client": "من العميل",
+          "shared": "مشترك"
+        },
+        "addAttribute": "إضافة خاصية",
+        "table": {
+          "key": "المفتاح",
+          "value": "القيمة",
+          "lastUpdate": "آخر تحديث",
+          "actions": "الإجراءات",
+          "noData": "لم يتم العثور على بيانات قياس"
+        },
+        "buttons": {
+          "edit": "تعديل",
+          "delete": "حذف"
+        },
+        "pagination": "صفحة {{page}}",
+        "messages": {
+          "editComingSoon": "ميزة تعديل الخصائص ستتوفر قريباً",
+          "deleteConfirm": "هل أنت متأكد أنك تريد حذف الخاصية \"{{key}}\"؟",
+          "deleteSuccess": "تم حذف الخاصية بنجاح",
+          "deleteError": "فشل في حذف الخاصية",
+          "addComingSoon": "ميزة إضافة الخصائص ستتوفر قريباً",
+          "error": "فشل في تحميل بيانات القياس عن بعد. ربما لم يقم الجهاز بالإبلاغ بعد."
+        },
+        "details": {
+          "latestTitle": "آخر القيم",
+          "title": "آخر القيم",
+          "noTelemetry": "لا يوجد بيانات قياس متوفرة",
+          "keys": "مفاتيح القياس:",
+          "graphTitle": "معدل الرسائل (آخر 24 ساعة)",
+          "graphX": "الشهر",
+          "graphY": "القيمة",
+          "refresh": "تحديث",
+          "addProfile": "إضافة ملف تعريف",
+          "payloadData": "بيانات الحمولة",
+          "lastUpdated": "آخر تحديث:",
+          "reportedAt": "تم الإبلاغ في:"
+        }
+      },
+      "alarms": {
+        "summary": {
+          "active": "التنبيهات النشطة",
+          "critical": "حرج",
+          "major": "كبير",
+          "warning": "تحذير"
+        },
+        "filters": {
+          "label": "تصفية:",
+          "status": "الحالة:",
+          "severity": "الخطورة:",
+          "timeRange": "النطاق الزمني:",
+          "apply": "تطبيق",
+          "statusOptions": {
+            "all": "جميع الحالات",
+            "active": "نشط",
+            "acknowledged": "تم الإقرار به",
+            "cleared": "تم مسحه"
+          },
+          "severityOptions": {
+            "all": "جميع المستويات",
+            "critical": "حرج",
+            "major": "كبير",
+            "minor": "صغير",
+            "warning": "تحذير"
+          },
+          "timeRangeOptions": {
+            "1h": "آخر ساعة",
+            "24h": "آخر 24 ساعة",
+            "7d": "آخر 7 أيام",
+            "30d": "آخر 30 يوم",
+            "all": "كل الوقت"
+          }
+        },
+        "table": {
+          "severity": "الخطورة",
+          "type": "النوع",
+          "status": "الحالة",
+          "created": "وقت الإنشاء",
+          "updated": "وقت التحديث",
+          "message": "الرسالة",
+          "acknowledged": "تم الإقرار",
+          "actions": "الإجراءات",
+          "noData": "لم يتم العثور على تنبيهات",
+          "yes": "نعم",
+          "no": "لا"
+        },
+        "messages": {
+          "editComingSoon": "ميزة تعديل التنبيهات ستتوفر قريباً",
+          "deleteConfirm": "هل أنت متأكد أنك تريد حذف هذا التنبيه؟",
+          "deleteSuccess": "تم حذف التنبيه بنجاح",
+          "deleteError": "فشل في حذف التنبيه"
+        }
+      }
+    }
+  },
+  "deviceProfiles": {
+    "title": "ملفات تعريف الأجهزة",
+    "subtitle": "إدارة قوالب تكوين الأجهزة",
+    "totalProfiles": "إجمالي ملفات التعريف",
+    "totalDevices": "إجمالي الأجهزة",
+    "createProfile": "إنشاء ملف تعريف",
+    "deviceConfigurations": "تكوينات الأجهزة",
+    "usingTheseProfiles": "باستخدام هذه الملفات التعريفية",
+    "defaultProfiles": "ملفات التعريف الافتراضية",
+    "gatewayProfiles": "ملفات تعريف البوابات",
+    "table": {
+      "name": "الاسم",
+      "type": "النوع",
+      "transport": "وسيلة النقل",
+      "devices": "الأجهزة",
+      "created": "تاريخ الإنشاء",
+      "actions": "الإجراءات"
+    },
+    "form": {
+      "createTitle": "إنشاء ملف تعريف الجهاز",
+      "createDescription": "اتبع الخطوات لإنشاء ملف تعريف جهاز جديد",
+      "steps": {
+        "details": {
+          "title": "تفاصيل ملف تعريف الجهاز",
+          "description": "معلومات ملف تعريف الجهاز الأساسية"
+        },
+        "transport": {
+          "title": "تكوين النقل",
+          "description": "تكوين بروتوكول النقل",
+          "optional": "(اختياري)"
+        },
+        "alarms": {
+          "title": "قواعد التنبيه",
+          "description": "تحديد قواعد التنبيه"
+        },
+        "provisioning": {
+          "title": "تهيئة الجهاز",
+          "description": "تكوين إعدادات التهيئة"
+        }
+      },
+      "fields": {
+        "name": "اسم ملف التعريف *",
+        "namePlaceholder": "مثال: مستشعر درجة الحرارة",
+        "description": "الوصف",
+        "descriptionPlaceholder": "وصف ملف التعريف...",
+        "type": "نوع الجهاز *",
+        "typePlaceholder": "اختر نوع الجهاز",
+        "defaultRuleChain": "سلسلة القواعد الافتراضية",
+        "ruleChainPlaceholder": "اختر سلسلة القواعد الافتراضية",
+        "queue": "زمام الانتظار",
+        "queuePlaceholder": "مثال: زمام الانتظار الرئيسي",
+        "transportType": "نوع النقل",
+        "transportPlaceholder": "اختر نوع النقل",
+        "telemetryTopic": "موضوع القياس عن بعد للجهاز",
+        "telemetryPlaceholder": "مثال: v1/devices/me/telemetry",
+        "attributesTopic": "موضوع سمات الجهاز",
+        "attributesPlaceholder": "مثال: v1/devices/me/attributes",
+        "baseUrl": "رابط الأساس",
+        "baseUrlPlaceholder": "مثال: https://api.example.com",
+        "timeout": "المهلة (بالثواني)",
+        "port": "المنفذ",
+        "baudRate": "معدل الباود",
+        "region": "المنطقة",
+        "regionPlaceholder": "مثال: EU868",
+        "appEui": "معرف التطبيق EUI",
+        "provisionStrategy": "إستراتيجية التهيئة",
+        "provisionPlaceholder": "اختر إستراتيجية التهيئة",
+        "provisionDescription": "إستراتيجية التهيئة",
+        "ruleChainDescription": "سلسلة القواعد الافتراضية",
+        "queueDescription": "سلسلة القواعد الافتراضية"
+      },
+      "buttons": {
+        "previous": "السابق",
+        "next": "التالي",
+        "cancel": "إلغاء",
+        "create": "إنشاء ملف تعريف",
+        "addAlarm": "إضافة قاعدة تنبيه",
+        "addAnotherAlarm": "إضافة قاعدة تنبيه أخرى"
+      },
+      "messages": {
+        "noAlarms": "لم يتم تحديد قواعد تنبيه",
+        "alarmRule": "قاعدة التنبيه",
+        "optional": "اختياري",
+        "createSuccess": "تم إنشاء ملف تعريف الجهاز بنجاح",
+        "createError": "فشل إنشاء ملف تعريف الجهاز. يرجى المحاولة مرة أخرى.",
+        "deleteSuccess": "تم حذف ملف تعريف الجهاز بنجاح",
+        "deleteError": "فشل حذف ملف تعريف الجهاز. يرجى المحاولة مرة أخرى.",
+        "create": "إنشاء ملف تعريف"
+      },
+      "options": {
+        "sensor": "مستشعر",
+        "gateway": "بوابة",
+        "meter": "عداد",
+        "actuator": "مشغل",
+        "mqtt": "MQTT",
+        "http": "HTTP",
+        "coap": "CoAP",
+        "lwm2m": "LWM2M",
+        "snmp": "SNMP",
+        "critical": "حرج",
+        "major": "رئيسي",
+        "minor": "ثانوي",
+        "warning": "تحذير",
+        "indeterminate": "غير محدد",
+        "allowCreateNew": "السماح بإنشاء أجهزة جديدة",
+        "checkPreProvisioned": "التحقق من الأجهزة المهيأة مسبقاً",
+        "disabled": "معطل"
+      }
+    }
+  },
+  "assetProfiles": {
+    "title": "ملفات تعريف الأصول",
+    "subtitle": "إدارة التسلسل الهرمي للأصول والعلاقات.",
+    "totalProfiles": "إجمالي ملفات تعريف الأصول",
+    "assetConfigurations": "تكوينات الأصول",
+    "totalAssets": "إجمالي الأصول",
+    "usingTheseProfiles": "باستخدام هذه الملفات الشخصية",
+    "industrial": "صناعي",
+    "facilities": "مرافق",
+    "commercial": "تجاري",
+    "buildings": "مباني",
+    "createProfile": "إنشاء ملف تعريف جديد",
+    "noProfiles": "لم يتم العثور على ملفات تعريف الأصول",
+    "table": {
+      "name": "الاسم",
+      "default": "افتراضي",
+      "created": "تاريخ الإنشاء",
+      "actions": "الإجراءات"
+    },
+    "messages": {
+      "createSuccess": "تم إنشاء ملف تعريف الأصل بنجاح",
+      "createError": "فشل في إنشاء ملف تعريف الأصل. يرجى المحاولة مرة أخرى.",
+      "deleteSuccess": "تم حذف ملف تعريف الأصل بنجاح",
+      "deleteError": "فشل في حذف ملف تعريف الأصل. يرجى المحاولة مرة أخرى.",
+      "deleteTitle": "حذف ملف تعريف الأصل",
+      "deleteDescription": "هل أنت متأكد أنك تريد حذف \"{{name}}\"؟ لا يمكن التراجع عن هذا الإجراء وسيؤثر على جميع الأصول التي تستخدم هذا الملف التعريفي."
+    },
+    "form": {
+      "createTitle": "إضافة ملف تعريف الأصل",
+      "createDescription": "إنشاء تكوين ملف تعريف أصل جديد",
+      "name": "الاسم *",
+      "namePlaceholder": "أدخل اسم ملف تعريف الأصل",
+      "description": "الوصف",
+      "descriptionPlaceholder": "أدخل وصف ملف تعريف الأصل",
+      "defaultRuleChain": "سلسلة القواعد الافتراضية",
+      "ruleChainPlaceholder": "اختر سلسلة القواعد الافتراضية",
+      "queue": "الطابور",
+      "queuePlaceholder": "اختر الطابور",
+      "defaultEdgeRuleChain": "سلسلة قواعد الحافة الافتراضية",
+      "edgeRuleChainPlaceholder": "اختر سلسلة قواعد الحافة الافتراضية",
+      "edgeRuleChainDescription": "تستخدم على الحافة كسلسلة قواعد لمعالجة البيانات الواردة للأصول التابعة لملف تعريف الأصل هذا",
+      "cancel": "إلغاء",
+      "creating": "جاري الإنشاء...",
+      "create": "إنشاء ملف التعريف",
+      "ruleChains": {
+        "root": "سلسلة القواعد الجذرية",
+        "industrial": "المعالجة الصناعية",
+        "building": "إدارة المباني",
+        "residential": "المعالجة السكنية",
+        "warehouse": "معالجة المستودعات",
+        "edge": "معالجة الحافة",
+        "gateway": "معالجة البوابة"
+      },
+      "queues": {
+        "root": "طابور الجذر"
+      }
+    }
+  },
+  "assets": {
+    "title": "الأصول",
+    "subtitle": "إدارة التسلسل الهرمي للأصول والعلاقات.",
+    "addAsset": "إضافة أصل",
+    "editAsset": "تعديل الأصل",
+    "deleteAsset": "حذف الأصل",
+    "assetName": "اسم الأصل",
+    "assetType": "نوع الأصل",
+    "parentAsset": "الأصل الرئيسي",
+    "childAssets": "الأصول الفرعية",
+    "assignedDevices": "الأجهزة المخصصة",
+    "noAssets": "لا توجد أصول",
+    "searchPlaceholder": "البحث في الأصول...",
+    "actions": {
+      "export": "تصدير",
+      "import": "استيراد",
+      "addAsset": "+ إضافة أصل"
+    },
+    "filters": {
+      "assetType": "نوع الأصل",
+      "customer": "العميل",
+      "filter": "تصفية"
+    },
+    "table": {
+      "name": "الاسم",
+      "type": "النوع",
+      "customer": "العميل",
+      "created": "تاريخ الإنشاء",
+      "status": "الحالة",
+      "actions": "الإجراءات"
+    },
+    "status": {
+      "active": "نشط",
+      "warning": "تحذير",
+      "error": "خطأ"
+    },
+    "details": {
+      "overview": "نظرة عامة",
+      "attributes": "الخصائص",
+      "relations": "العلاقات",
+      "telemetry": "البيانات الفورية",
+      "assetInformation": "معلومات الأصل",
+      "name": "الاسم",
+      "type": "النوع",
+      "customer": "العميل",
+      "created": "تاريخ الإنشاء",
+      "lastActivity": "آخر نشاط",
+      "connectedDevices": "الأجهزة المتصلة",
+      "activeDevices": "الأجهزة النشطة",
+      "offline": "غير متصل",
+      "warning": "تحذير",
+      "recentActivity": "آخر الأنشطة",
+      "deviceAdded": "تمت إضافة جهاز",
+      "alarmTriggered": "تم تشغيل إنذار",
+      "configUpdated": "تم تحديث الإعدادات",
+      "ago": "منذ",
+      "assetHierarchy": "تسلسل الأصل",
+      "floors": {
+        "floor1": "الطابق 1",
+        "floor2": "الطابق 2",
+        "basement": "الطابق السفلي"
+      },
+      "devices": {
+        "temperatureSensor": "حساس درجة الحرارة",
+        "hvacController": "وحدة تحكم التكييف"
+      }
+    }
+  },
+  "addAsset": {
+    "title": "إضافة أصل جديد",
+    "assetName": "اسم الأصل",
+    "assetNamePlaceholder": "اسم الأصل *",
+    "assetType": "نوع الأصل",
+    "assetTypePlaceholder": "اختر نوع الأصل...",
+    "description": "الوصف",
+    "descriptionPlaceholder": "أدخل الوصف",
+    "assetProfile": "ملف تعريف الأصل",
+    "assetProfilePlaceholder": "اختر الملف الشخصي...",
+    "parentAsset": "الأصل الأب",
+    "parentAssetPlaceholder": "اختر الأصل الأب...",
+    "location": "الموقع",
+    "latitude": "خط العرض",
+    "latitudePlaceholder": "مثال: 40.7128",
+    "longitude": "خط الطول",
+    "longitudePlaceholder": "مثال: -74.0060",
+    "enterCoordinates": "أدخل خط العرض وخط الطول لعرض الخريطة",
+    "invalidLatitude": "يجب أن يكون خط العرض بين -90 و 90",
+    "invalidLongitude": "يجب أن يكون خط الطول بين -180 و 180",
+    "bothCoordinatesRequired": "خط العرض وخط الطول مطلوبان",
+    "additionalAttributes": "السمات الإضافية",
+    "value": "القيمة",
+    "add": "إضافة",
+    "remove": "إزالة",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "nameRequired": "اسم الأصل مطلوب",
+    "typeRequired": "نوع الأصل مطلوب"
+  },
+  "alarms": {
+    "title": "الإنذارات",
+    "description": "مراقبة وإدارة إنذارات النظام",
+    "acknowledge": "إقرار",
+    "clear": "مسح",
+    "severity": "الخطورة",
+    "critical": "حرج",
+    "major": "كبير",
+    "minor": "صغير",
+    "warning": "تحذير",
+    "activeAlarms": "الإنذارات النشطة",
+    "acknowledgedAlarms": "تم الإقرار بها",
+    "clearedAlarms": "تم مسحها",
+    "resolvedAlarms": "تم حلها",
+    "table": {
+      "severity": "الخطورة",
+      "type": "النوع",
+      "originator": "المصدر",
+      "status": "الحالة",
+      "created": "تم الإنشاء",
+      "actions": "الإجراءات",
+      "noData": "لا توجد بيانات متاحة"
+    }
+  },
+  "users": {
+    "title": "المستخدمون والأدوار",
+    "addUser": "إضافة مستخدم",
+    "editUser": "تعديل المستخدم",
+    "deleteUser": "حذف المستخدم",
+    "userName": "اسم المستخدم",
+    "email": "البريد الإلكتروني",
+    "role": "الدور",
+    "permissions": "الصلاحيات",
+    "lastLogin": "آخر تسجيل دخول"
+  },
+  "usersManagement": {
+    "title": "إدارة المستخدمين والأدوار",
+    "description": "إدارة المستخدمين وأدوارهم",
+    "tabs": {
+      "users": "المستخدمون",
+      "customers": "العملاء",
+      "roles": "الأدوار"
+    },
+    "add": {
+      "user": "إضافة مستخدم",
+      "customer": "إضافة عميل",
+      "role": "إضافة دور"
+    },
+    "common": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "role": "الدور",
+      "customer": "العميل",
+      "type": "النوع",
+      "status": "الحالة",
+      "description": "الوصف",
+      "city": "المدينة",
+      "state": "الولاية/المقاطعة",
+      "address": "العنوان",
+      "zip": "الرمز البريدي",
+      "country": "البلد",
+      "requiredFields": "* الحقول المطلوبة",
+      "cancel": "إلغاء",
+      "save": "حفظ",
+      "update": "تحديث",
+      "actions": "الإجراءات",
+      "edit": "تعديل",
+      "roles": "الأدوار",
+      "created": "تم الإنشاء"
+    },
+    "create_user": {
+      "title": "إضافة مستخدم جديد",
+      "userDetails": "تفاصيل المستخدم",
+      "placeholders": {
+        "name": "أدخل الاسم",
+        "email": "أدخل البريد الإلكتروني",
+        "phone": "أدخل رقم الهاتف",
+        "role": "اختر الدور",
+        "customer": "اختر العميل"
+      },
+      "validation": {
+        "name": "الاسم مطلوب",
+        "email": "البريد الإلكتروني يجب أن يكون صالحاً",
+        "phone": "رقم الهاتف مطلوب",
+        "role": "الدور مطلوب",
+        "customer": "العميل مطلوب"
+      }
+    },
+    "create_customer": {
+      "title": "إضافة عميل جديد",
+      "info": "معلومات العميل",
+      "limits": "الحدود المخصصة",
+      "actionDescription": "وصف الإجراء",
+      "saveAndAdd": "حفظ وإضافة",
+      "subscription": {
+        "title": "الاشتراك الحالي",
+        "plan": "الخطة النشطة",
+        "resources": {
+          "users": "المستخدمين",
+          "devices": "الأجهزة",
+          "assets": "الأصول",
+          "dashboards": "لوحات التحكم",
+          "floorPlans": "مخططات الطوابق",
+          "automations": "الأتمتة"
+        }
+      },
+      "placeholders": {
+        "name": "أدخل اسم العميل",
+        "email": "أدخل البريد الإلكتروني للمسؤول",
+        "phone": "أدخل رقم الهاتف",
+        "description": "أدخل الوصف",
+        "city": "أدخل المدينة",
+        "state": "أدخل الولاية/المقاطعة",
+        "address": "أدخل العنوان",
+        "zip": "أدخل الرمز البريدي",
+        "country": "أدخل البلد"
+      }
+    },
+    "create_role": {
+      "title": "إنشاء دور",
+      "editTitle": "تعديل الدور",
+      "info": "معلومات الدور",
+      "permissions": "الصلاحيات",
+      "selectAll": "تحديد الكل",
+      "clearAll": "مسح الكل",
+      "validation": {
+        "name": "اسم الدور مطلوب",
+        "permissions": "يجب اختيار صلاحية واحدة على الأقل"
+      },
+      "placeholders": {
+        "name": "أدخل اسم الدور",
+        "description": "أدخل وصف الدور..."
+      }
+    },
+    "bulk_management": {
+      "title": "إدارة جماعية للمستخدمين",
+      "description": "تنفيذ إجراءات على عدة مستخدمين في وقت واحد",
+      "selectedBanner": "إجمالي {{count}} مستخدمين مختارين",
+      "availableActions": "الإجراءات المتاحة",
+      "sections": {
+        "userStatus": "حالة المستخدم",
+        "roleManagement": "إدارة الأدوار",
+        "communication": "الاتصالات",
+        "dataManagement": "إدارة البيانات"
+      },
+      "actions": {
+        "activate": "تفعيل المستخدمين",
+        "deactivate": "إلغاء تفعيل المستخدمين",
+        "suspend": "تعليق المستخدمين",
+        "delete": "حذف المستخدمين",
+        "assignRole": "تعيين دور",
+        "removeRole": "إزالة دور",
+        "updatePermissions": "تحديث الصلاحيات",
+        "sendEmail": "إرسال بريد إلكتروني",
+        "sendNotification": "إرسال إشعار",
+        "exportData": "تصدير البيانات",
+        "bulkImport": "استيراد جماعي",
+        "readyToExecute": "جاهز للتنفيذ على {{count}} مستخدمين"
+      },
+      "modals": {
+        "status": {
+          "title": "تأكيد تغيير الحالة الجماعي",
+          "description": "هل أنت متأكد أنك تريد تغيير حالة {{count}} مستخدمين إلى {{status}}؟"
+        },
+        "delete": {
+          "title": "تأكيد الحذف الجماعي",
+          "description": "هل أنت متأكد أنك تريد حذف {{count}} مستخدمين؟ لا يمكن التراجع عن هذا الإجراء."
+        },
+        "role": {
+          "assignTitle": "تعيين دور",
+          "removeTitle": "إزالة دور",
+          "description": "اختر دوراً لـ {{action}} لـ {{count}} مستخدمين.",
+          "placeholder": "اختر دوراً"
+        },
+        "communication": {
+          "emailTitle": "إرسال بريد إلكتروني",
+          "notifTitle": "إرسال إشعار",
+          "description": "أدخل الرسالة التي تريد إرسالها إلى {{count}} مستخدمين.",
+          "subject": "الموضوع",
+          "notifTitleLabel": "العنوان",
+          "type": "النوع",
+          "priority": "الأولوية",
+          "message": "الرسالة",
+          "sending": "جاري الإرسال...",
+          "send": "إرسال {{type}}"
+        },
+        "export": {
+          "title": "تصدير المستخدمين",
+          "description": "اختر التنسيق الذي تريد تصدير بيانات المستخدمين به.",
+          "format": "التنسيق",
+          "exporting": "جاري التصدير...",
+          "exportNow": "تصدير الآن"
+        },
+        "import": {
+          "title": "استيراد جماعي للمستخدمين",
+          "description": "اختر ملف CSV أو JSON يحتوي على بيانات المستخدمين للاستيراد.",
+          "selectFile": "اختر ملفاً",
+          "selected": "المختار: {{name}} ({{size}} ك.ب)",
+          "importNow": "استيراد الآن",
+          "importing": "جاري الاستيراد..."
+        },
+        "toasts": {
+          "statusSuccess": "تم تحديث حالة المستخدمين بنجاح",
+          "statusError": "فشل تحديث حالة المستخدمين",
+          "roleSuccess": "تم {{action}} الدور بنجاح",
+          "roleError": "فشل تحديث الأدوار",
+          "deleteSuccess": "تم حذف المستخدمين بنجاح",
+          "deleteError": "فشل حذف المستخدمين",
+          "emailSuccess": "تم إرسال رسائل البريد الإلكتروني بنجاح",
+          "emailError": "فشل إرسال رسائل البريد الإلكتروني",
+          "notifSuccess": "تم إرسال الإشعارات بنجاح",
+          "notifError": "فشل إرسال الإشعارات",
+          "exportSuccess": "تم تصدير المستخدمين بنجاح",
+          "exportError": "فشل تصدير المستخدمين",
+          "importSuccess": "تم استيراد {{imported}} مستخدم بنجاح. فشل {{failed}}.",
+          "importError": "فشل استيراد المستخدمين"
+        },
+        "validation": {
+          "selectRole": "يرجى اختيار دور",
+          "enterMessage": "يرجى إدخال رسالة",
+          "enterSubject": "يرجى إدخال موضوع",
+          "enterTitle": "يرجى إدخال عنوان الإشعار",
+          "selectFile": "يرجى اختيار ملف للاستيراد",
+          "selectAction": "يرجى اختيار إجراء واحد على الأقل"
+        },
+        "feedback": {
+          "executing": "جاري تنفيذ {{actionCount}} إجراء(ات) على {{userCount}} مستخدمين",
+          "comingSoon": "ميزة المعاينة ستتوفر قريباً"
+        }
+      }
+    },
+    "role_permission_management": {
+      "roleTitle": "الدور: {{name}}",
+      "descTitle": "الوصف: {{desc}}",
+      "table": {
+        "permission": "الصلاحية",
+        "description": "الوصف",
+        "access": "الوصول",
+        "create": "إنشاء",
+        "read": "قراءة",
+        "update": "تحديث",
+        "delete": "حذف"
+      },
+      "warning": "لا يمكنك تعديل أدوار النظام"
+    },
+    "customer_details": {
+      "tabs": {
+        "permissions": "الصلاحيات",
+        "assignedUsers": "المستخدمون المعينون",
+        "devices": "الأجهزة",
+        "activityLogs": "سجلات النشاط"
+      },
+      "matrixTitle": "مصفوفة الصلاحيات",
+      "legend": {
+        "granted": "صلاحية ممنوحة",
+        "denied": "صلاحية مرفوضة"
+      }
+    },
+    "user_details": {
+      "tabs": {
+        "permissions": "الصلاحيات",
+        "devices": "الأجهزة",
+        "activityLogs": "سجل النشاط"
+      },
+      "matrix": {
+        "title": "مصفوفة الصلاحيات",
+        "description": "الصلاحيات الفردية والمستندة إلى الدور الممنوحة لهذا المستخدم.",
+        "showOnlyGranted": "إظهار الممنوحة فقط",
+        "actionsCount": "{{count}} إجراءات",
+        "granted": "تم منح الصلاحية",
+        "denied": "تم رفض الصلاحية"
+      },
+      "actions": {
+        "editPermissions": "تعديل الصلاحيات",
+        "saveChanges": "حفظ التغييرات"
+      }
+    },
+    "assign_permissions": {
+      "title": "تعيين الصلاحيات",
+      "userLabel": "المستخدم: {{email}}",
+      "search": {
+        "available": "البحث في الصلاحيات...",
+        "assigned": "البحث في المعينة..."
+      },
+      "panels": {
+        "available": "الصلاحيات المتاحة",
+        "assigned": "الصلاحيات المعينة",
+        "summary": "ملخص الصلاحيات"
+      },
+      "summary": {
+        "noAssigned": "لا توجد صلاحيات معينة",
+        "currentRole": "الدور الحالي",
+        "totalPermissions": "إجمالي الصلاحيات",
+        "assignedCount": "{{count}} معينة",
+        "level": "مستوى الصلاحية",
+        "lastModified": "آخر تعديل"
+      },
+      "levels": {
+        "high": "عالٍ",
+        "moderate": "متوسط",
+        "low": "منخفض"
+      },
+      "toasts": {
+        "selectFirst": "يرجى اختيار صلاحية لإضافتها",
+        "alreadyAssigned": "الصلاحية معينة بالفعل",
+        "added": "تمت إضافة الصلاحية: {{label}}",
+        "removed": "تمت إزالة الصلاحية: {{label}}",
+        "saved": "تم حفظ الصلاحيات بنجاح"
+      }
+    },
+    "customer_card": {
+      "editCustomer": "تعديل العميل",
+      "cancelEdit": "إلغاء التعديل",
+      "saveChanges": "حفظ التغييرات",
+      "saving": "جاري الحفظ...",
+      "delete": "حذف",
+      "labels": {
+        "name": "الاسم",
+        "status": "الحالة",
+        "email": "البريد الإلكتروني",
+        "phone": "رقم الهاتف",
+        "tenantId": "معرف المستأجر",
+        "city": "المدينة",
+        "state": "المنطقة",
+        "country": "البلد",
+        "address": "العنوان",
+        "zipCode": "الرمز البريدي",
+        "createdAt": "تاريخ الإنشاء",
+        "allocationLimits": "حدود التخصيص",
+        "usageCounters": "عدادات الاستخدام",
+        "readOnly": "(للقراءة فقط)",
+        "allocUsers": "المستخدمون المخصصون",
+        "allocAssets": "الأصول المخصصة",
+        "allocDevices": "الأجهزة المخصصة",
+        "allocDashboards": "لوحات التحكم المخصصة",
+        "allocFloorPlans": "مخططات الطوابق المخصصة",
+        "allocAutomations": "الأتمتة المخصصة"
+      },
+      "toasts": {
+        "updateSuccess": "تم تحديث العميل بنجاح",
+        "updateError": "فشل تحديث العميل",
+        "deleteSuccess": "تم حذف العميل بنجاح",
+        "deleteError": "فشل حذف العميل"
+      },
+      "modals": {
+        "deleteTitle": "حذف العميل"
+      }
+    },
+    "user_card": {
+      "editUser": "تعديل المستخدم",
+      "cancel": "إلغاء",
+      "save": "حفظ",
+      "delete": "حذف",
+      "placeholders": {
+        "enterName": "أدخل الاسم",
+        "enterPhone": "أدخل رقم الهاتف",
+        "enterCompany": "أدخل اسم الشركة"
+      },
+      "labels": {
+        "emailAddress": "البريد الإلكتروني",
+        "phoneNumber": "رقم الهاتف",
+        "company": "الشركة",
+        "lastLogin": "آخر تسجيل دخول",
+        "createdAt": "تاريخ الإنشاء",
+        "lastUpdated": "آخر تحديث",
+        "noRole": "بدون دور"
+      },
+      "toasts": {
+        "updateSuccess": "تم تحديث المستخدم بنجاح",
+        "updateError": "فشل تحديث المستخدم",
+        "deleteSuccess": "تم حذف المستخدم {{name}} بنجاح",
+        "deleteError": "فشل حذف المستخدم"
+      }
+    },
+    "customer_users_list": {
+      "title": "المستخدمون المعينون",
+      "displayHierarchical": "عرض التسلسل الهرمي",
+      "noUsers": "لا يوجد مستخدمون متاحون.",
+      "selectCustomer": "اختر عميلاً لعرض المستخدمين.",
+      "table": {
+        "user": "المستخدم",
+        "email": "البريد الإلكتروني",
+        "role": "الدور",
+        "status": "الحالة",
+        "created": "تاريخ الإنشاء"
+      }
+    },
+    "activity_log": {
+      "noActivity": "لا يوجد نشاط متاح.",
+      "noUserActivity": "لا يوجد نشاط محدد متاح لهذا المستخدم.",
+      "headers": {
+        "description": "الوصف",
+        "action": "الإجراء",
+        "date": "التاريخ"
+      }
+    },
+    "hierarchy": {
+      "title": "تصريح التسلسل الهرمي للمستخدم",
+      "visualRep": "تمثيل مرئي للمستخدمين داخل {{name}}",
+      "exploreStructure": "استكشاف الهيكل التنظيمي للمستخدمين.",
+      "refining": "تحديث خريطة التسلسل الهرمي...",
+      "orgRoot": "جذر المنظمة",
+      "noData": "لا تتوفر بيانات التسلسل الهرمي",
+      "ensureUsers": "يرجى التأكد من تعيين المستخدمين لهذا العميل.",
+      "legend": {
+        "org": "المنظمة",
+        "role": "الدور الوظيفي",
+        "active": "مستخدم نشط",
+        "inactive": "غير نشط/آخر"
+      },
+      "stats": "إجمالي المستخدمين: {{count}}"
+    },
+    "users_tab": {
+      "title": "كل المستخدمين",
+      "tabs": {
+        "all": "الكُل",
+        "customer_user": "مستخدم عميل",
+        "customer": "عميل"
+      },
+      "bulkEdit": "تعديل البيانات بالجملة ({{count}})",
+      "noUsers": "لم يتم العثور على مستخدمين",
+      "tooltips": {
+        "delete": "حذف المستخدم",
+        "view": "عرض التفاصيل"
+      },
+      "toasts": {
+        "deleteSuccess": "تم حذف المستخدم {{name}} بنجاح",
+        "statusUpdated": "تم تحديث حالة المستخدم إلى {{status}}",
+        "statusUpdateError": "فشل تحديث حالة المستخدم"
+      },
+      "statusConfirm": {
+        "title": "تأكيد تغيير الحالة",
+        "description": "هل أنت متأكد أنك تريد {{action}} المستخدم {{name}}؟",
+        "activate": "تنشيط",
+        "deactivate": "إلغاء تنشيط"
+      }
+    },
+    "roles_tab": {
+      "title": "إدارة المستخدمين والأدوار",
+      "noRoles": "لم يتم العثور على أدوار",
+      "tooltips": {
+        "manage": "إدارة الدور"
+      },
+      "toasts": {
+        "deleteSuccess": "تم حذف الدور بنجاح",
+        "deleteError": "فشل حذف الدور"
+      },
+      "summary": {
+        "total": "إجمالي الأدوار",
+        "system": "أدوار النظام",
+        "custom": "أدوار مخصصة"
+      },
+      "type": {
+        "system": "نظام",
+        "custom": "مخصص"
+      }
+    },
+    "customers_tab": {
+      "title": "كل العملاء",
+      "noCustomers": "لم يتم العثور على عملاء",
+      "tooltips": {
+        "assign": "تعيين المستخدمين",
+        "view": "عرض العميل",
+        "delete": "حذف العميل"
+      },
+      "toasts": {
+        "deleteSuccess": "تم حذف العميل بنجاح",
+        "deleteError": "فشل حذف العميل"
+      }
+    },
+    "association": {
+      "title": "ربط مستخدم العميل",
+      "availableUsers": "المستخدمون المتاحون",
+      "assignedUsers": "المستخدمون المعينون",
+      "selectToAssign": "حدد المستخدم الذي تريد تعيينه",
+      "selectCustomerToAssign": "حدد العميل لتعيين المستخدم المختار",
+      "noAvailable": "لا يوجد مستخدمون متاحون",
+      "assign": "تعيين",
+      "remove": "إزالة",
+      "summary": {
+        "title": "ملخص التعيين",
+        "userStats": "إحصائيات المستخدم",
+        "availableStats": "المستخدمون المتاحون",
+        "totalAssigned": "إجمالي المعينين:",
+        "administrators": "المدراء:",
+        "managers": "المشرفون:",
+        "regularUsers": "المستخدمون العاديون:",
+        "unassigned": "غير معينين:",
+        "filtered": "نتائج البحث:",
+        "bulkAssign": "تعيين الدور بالجملة",
+        "exportList": "تصدير القائمة"
+      }
+    }
+  },
+  "analytics": {
+    "geo": {
+      "title": "التحليلات الجغرافية",
+      "subtitle": "التوزيع الجغرافي وتحليلات الأجهزة المستندة إلى الموقع",
+      "mapTitle": "خريطة توزيع الأجهزة",
+      "stats": {
+        "title": "الإحصائيات الإقليمية",
+        "totalDevices": "الإجمالي: {{count}} جهاز",
+        "viewMode": "وضع العرض:",
+        "heatmap": "خريطة حرارية",
+        "clusters": "المجموعات"
+      },
+      "table": {
+        "title": "الأداء المستند إلى الموقع",
+        "region": "المنطقة",
+        "avgResponseTime": "متوسط وقت الاستجابة",
+        "uptime": "وقت التشغيل",
+        "dataQuality": "جودة البيانات",
+        "alertRate": "معدل التنبيهات",
+        "status": "الحالة"
+      }
+    },
+    "title": "تحليلات ومراقبة الأجهزة - المبنى {{building}}",
+    "reportTemplates": "قوالب التقارير",
+    "filters": "المرشحات:",
+    "allFloors": "جميع الطوابق",
+    "allRooms": "جميع الغرف",
+    "last7Days": "آخر 7 أيام",
+    "activeDevices": "الأجهزة النشطة",
+    "offlineDevices": "الأجهزة غير المتصلة",
+    "criticalAlerts": "التنبيهات الحرجة",
+    "dataPointsToday": "نقاط البيانات اليوم",
+    "trendUpFromLastWeek": "↑ {{count}} من الأسبوع الماضي",
+    "trendDownFromLastWeek": "↓ {{count}} من الأسبوع الماضي",
+    "trendUpFromYesterday": "↑ {{percent}}% من أمس",
+    "deviceStatusTimeline": "الجدول الزمني لحالة الجهاز",
+    "online": "متصل",
+    "offline": "غير متصل",
+    "recentDeviceEvents": "أحداث الأجهزة الأخيرة",
+    "performanceMetrics": "مقاييس الأداء",
+    "networkUptime": "وقت تشغيل الشبكة",
+    "dataLossRate": "معدل فقدان البيانات",
+    "signalStrengthAvg": "متوسط قوة الإشارة",
+    "batteryHealthAverage": "متوسط صحة البطارية",
+    "export3D": "تصدير ثلاثي الأبعاد",
+    "setAlerts": "تعيين التنبيهات",
+    "refresh": "تحديث",
+    "events": {
+      "connected": "متصل",
+      "disconnected": "غير متصل",
+      "lowBatteryWarning": "تحذير بطارية منخفضة",
+      "dataTransmissionSuccessful": "نقل البيانات ناجح"
+    },
+    "timeAgo": {
+      "minutes": "منذ {{count}} دقيقة",
+      "hours": "منذ {{count}} ساعة",
+      "hoursPlural": "منذ {{count}} ساعات"
+    }
+  },
+  "deviceAnalytics": {
+    "title": "تحليلات الأجهزة",
+    "subtitle": "نظرة عامة على تحليلات منصة IoT الخاصة بك",
+    "selectTimeRange": "اختر النطاق الزمني",
+    "last24Hours": "آخر 24 ساعة",
+    "last7Days": "آخر 7 أيام",
+    "last30Days": "آخر 30 يوم",
+    "last90Days": "آخر 90 يوم",
+    "totalDevices": "إجمالي الأجهزة",
+    "dataGenerated": "البيانات المُولدة",
+    "activeAlerts": "التنبيهات النشطة",
+    "uptime": "وقت التشغيل",
+    "trendUpPercent": "↑ {{percent}}% من الأسبوع الماضي",
+    "deviceActivityTrends": "اتجاهات نشاط الجهاز",
+    "dataConsumptionByDashboard": "استهلاك البيانات حسب لوحة المعلومات",
+    "recentActivity": "النشاط الأخير",
+    "celsius": "درجة مئوية",
+    "tooltipDate": "التاريخ: {{value}}",
+    "tooltipTotal": "الإجمالي",
+    "startDate": "تاريخ البداية",
+    "endDate": "تاريخ النهاية",
+    "apply": "تطبيق",
+    "clear": "مسح",
+    "description": "نظرة عامة على التحليلات",
+    "activityMessages": {
+      "deviceGeneratedData": "الجهاز \"{{deviceName}}\" أنتج {{size}} من البيانات",
+      "dashboardConsumed": "لوحة المعلومات \"{{dashboardName}}\" استهلكت {{size}}",
+      "alertTriggered": "تم تشغيل التنبيه: {{message}}"
+    }
+  },
+  "individualDeviceAnalytics": {
+    "title": "تحليلات الجهاز",
+    "subtitle": "مراقبة أداء الجهاز الفردي وتوليد البيانات",
+    "exportData": "تصدير البيانات",
+    "deviceType": "نوع الجهاز",
+    "deviceTypeAll": "جميع أنواع الأجهزة",
+    "gateway": "بوابة",
+    "sensor": "حساس",
+    "controller": "وحدة تحكم",
+    "actuator": "مشغل",
+    "status": "الحالة",
+    "statusAll": "جميع الحالات",
+    "active": "نشط",
+    "idle": "خامل",
+    "error": "خطأ",
+    "offline": "غير متصل",
+    "timeRange": "النطاق الزمني",
+    "timeRange24Hours": "النطاق الزمني: 24 ساعة",
+    "timeRange7Days": "النطاق الزمني: 7 أيام",
+    "timeRange30Days": "النطاق الزمني: 30 يوم",
+    "timeRange90Days": "النطاق الزمني: 90 يوم",
+    "dataGenerated": "البيانات المُولدة",
+    "uptime": "وقت التشغيل",
+    "lastActive": "آخر نشاط",
+    "alerts": "التنبيهات",
+    "trendUpPercent": "↑ {{percent}}% من الأسبوع الماضي",
+    "ago": "منذ",
+    "activeAlerts": "تنبيهات نشطة",
+    "deviceActivityOverTime": "نشاط الجهاز بمرور الوقت",
+    "dataGenerationTrend": "اتجاه توليد البيانات",
+    "generated": "مُولد",
+    "statusDistribution": "توزيع الحالة",
+    "recentActivity": "النشاط الأخير",
+    "tableHeaders": {
+      "time": "الوقت",
+      "event": "الحدث",
+      "status": "الحالة",
+      "data": "البيانات"
+    },
+    "events": {
+      "dataTransmissionSuccessful": "نقل البيانات ناجح",
+      "telemetryDataReceived": "تم استلام بيانات القياس عن بُعد",
+      "alertThresholdExceeded": "تم تجاوز عتبة التنبيه",
+      "deviceReconnected": "إعادة اتصال الجهاز",
+      "configurationUpdated": "تم تحديث التكوين"
+    },
+    "statusLabels": {
+      "active": "نشط",
+      "idle": "خامل",
+      "error": "خطأ"
+    }
+  },
+  "dashboardAnalytics": {
+    "title": "تحليلات لوحة المعلومات",
+    "subtitle": "مراقبة المقاييس البيئية وأداء لوحة المعلومات",
+    "dataConsumption": "استهلاك البيانات",
+    "timeRange7Days": "النطاق الزمني: 7 أيام",
+    "timeRange24Hours": "النطاق الزمني: 24 ساعة",
+    "timeRange30Days": "النطاق الزمني: 30 يوم",
+    "timeRange90Days": "النطاق الزمني: 90 يوم",
+    "sortByCO2": "ترتيب حسب: CO2",
+    "sortByTemperature": "ترتيب حسب: درجة الحرارة",
+    "sortByHumidity": "ترتيب حسب: الرطوبة",
+    "sortByEnergyUsage": "ترتيب حسب: استهلاك الطاقة",
+    "sortByName": "ترتيب حسب: الاسم",
+    "exportData": "تصدير البيانات",
+    "tableHeaders": {
+      "dashboardName": "اسم لوحة المعلومات",
+      "co2Emissions": "انبعاثات CO2",
+      "temperature": "درجة الحرارة",
+      "humidity": "الرطوبة",
+      "energyUsage": "استهلاك الطاقة",
+      "lastUpdated": "آخر تحديث",
+      "status": "الحالة",
+      "actions": "الإجراءات"
+    },
+    "status": {
+      "active": "نشط",
+      "processing": "قيد المعالجة",
+      "error": "خطأ"
+    },
+    "environmentalMetricsTrends": "اتجاهات المقاييس البيئية",
+    "co2Emissions": "انبعاثات CO2",
+    "temperature": "درجة الحرارة",
+    "humidity": "الرطوبة",
+    "environmentalImpactSummary": "ملخص التأثير البيئي",
+    "totalCO2Emissions": "إجمالي انبعاثات CO2 (7 أيام)",
+    "energyConsumption": "استهلاك الطاقة",
+    "carbonFootprint": "البصمة الكربونية",
+    "efficiencyScore": "نقاط الكفاءة",
+    "sustainabilityTarget": "هدف الاستدامة: {{percent}}%",
+    "optimizationGoal": "هدف التحسين: {{percent}}%",
+    "trendUpPercent": "{{percent}}% من الأسبوع الماضي",
+    "trendDownPercent": "{{percent}}% من الأسبوع الماضي"
+  },
+  "productionOverview": {
+    "title": "تحليلات لوحة المعلومات - نظرة عامة على الإنتاج",
+    "subtitle": "تحليلات مفصلة لوحة معلومات نظرة عامة على الإنتاج",
+    "timeRangeLast24Hours": "النطاق الزمني: آخر 24 ساعة",
+    "timeRangeLast7Days": "النطاق الزمني: آخر 7 أيام",
+    "timeRangeLast30Days": "النطاق الزمني: آخر 30 يوم",
+    "timeRangeLast90Days": "النطاق الزمني: آخر 90 يوم",
+    "totalDevices": "إجمالي الأجهزة",
+    "dataGenerated": "البيانات المولدة",
+    "activeAlerts": "التنبيهات النشطة",
+    "uptime": "وقت التشغيل",
+    "trendUpPercent": "↑ {{percent}}% من الأسبوع الماضي",
+    "dataConsumptionByDevice": "استهلاك البيانات حسب الجهاز",
+    "recentActivity": "النشاط الأخير",
+    "widgetPerformance": "أداء الويدجت",
+    "tableHeaders": {
+      "widgetName": "اسم الويدجت",
+      "loadTime": "وقت التحميل",
+      "status": "الحالة"
+    },
+    "widgetNames": {
+      "temperatureChart": "مخطط درجة الحرارة",
+      "pressureGauge": "مقياس الضغط",
+      "motorStatus": "حالة المحرك",
+      "flowRateGraph": "رسم بياني لمعدل التدفق",
+      "alarmPanel": "لوحة التنبيه"
+    },
+    "widgetStatus": {
+      "good": "جيد",
+      "slow": "بطيء",
+      "poor": "ضعيف"
+    },
+    "activityMessages": {
+      "dashboardLoaded": "تم تحميل لوحة المعلومات بواسطة {{user}}",
+      "widgetRefresh": "تحديث الويدجت: {{widgetName}}",
+      "newDeviceConnected": "تم توصيل جهاز جديد: {{deviceName}}",
+      "alertResolved": "تم حل التنبيه: {{alertMessage}}"
+    },
+    "statusSummary": {
+      "online": "متصل: {{count}} أجهزة",
+      "warning": "تحذير: {{count}} أجهزة",
+      "offline": "غير متصل: {{count}} أجهزة",
+      "maintenance": "صيانة: {{count}} جهاز",
+      "maintenancePlural": "صيانة: {{count}} أجهزة"
+    },
+    "footer": {
+      "lastUpdated": "آخر تحديث: منذ {{time}} دقيقة",
+      "autoRefresh": "التحديث التلقائي: مفعّل (فاصل {{interval}} ثانية)"
+    },
+    "refresh": "تحديث"
+  },
+  "geoAnalytics": {
+    "title": "التحليلات الجغرافية",
+    "subtitle": "التوزيع الجغرافي وتحليلات الأجهزة القائمة على الموقع",
+    "deviceDistributionMap": "خريطة توزيع الأجهزة",
+    "totalDevices": "الإجمالي",
+    "devices": "أجهزة",
+    "data": "البيانات",
+    "growth": "نمو",
+    "decline": "انخفاض",
+    "viewMode": "وضع العرض",
+    "heatmap": "خريطة الحرارة",
+    "clusters": "المجموعات",
+    "locationBasedPerformance": "الأداء القائم على الموقع",
+    "online": "متصل",
+    "offline": "غير متصل",
+    "exportMap": "تصدير الخريطة",
+    "refresh": "تحديث",
+    "filters": {
+      "filter": "تصفية",
+      "time": "الوقت",
+      "allRegions": "جميع المناطق",
+      "last24Hours": "آخر 24 ساعة",
+      "last7Days": "آخر 7 أيام",
+      "last30Days": "آخر 30 يوم",
+      "last90Days": "آخر 90 يوم"
+    },
+    "regions": {
+      "northAmerica": "أمريكا الشمالية",
+      "asia": "آسيا",
+      "europe": "أوروبا",
+      "australia": "أستراليا",
+      "others": "أخرى"
+    },
+    "tableHeaders": {
+      "region": "المنطقة",
+      "avgResponseTime": "متوسط وقت الاستجابة",
+      "uptime": "وقت التشغيل",
+      "dataQuality": "جودة البيانات",
+      "alertRate": "معدل التنبيه",
+      "status": "الحالة"
+    }
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "markAsRead": "وضع علامة كمقروء",
+    "markAllAsRead": "وضع علامة على الكل كمقروء",
+    "noNotifications": "لا توجد إشعارات",
+    "unreadCount": "{{count}} إشعارات غير مقروءة",
+    "viewAll": "عرض الكل"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "general": "الإعدادات العامة",
+    "description": "إدارة تفضيلات التطبيق",
+    "generalDescription": "إدارة إعدادات التطبيق العامة",
+    "language": "اللغة",
+    "theme": "السمة",
+    "themeOptions": {
+      "light": "فاتح",
+      "dark": "داكن",
+      "auto": "تلقائي"
+    },
+    "autoRefreshDashboard": "تحديث لوحة التحكم تلقائياً",
+    "autoRefreshDashboardDescription": "تحديث بيانات لوحة التحكم تلقائياً",
+    "compactMode": "وضع المدمج",
+    "compactModeDescription": "عرض المزيد من المعلومات في مساحة أقل",
+    "applyAndSave": "تطبيق وحفظ التفضيلات",
+    "notifications": {
+      "title": "إعدادات الإشعارات",
+      "preferences": "تفضيلات الإشعارات",
+      "description": "اختر الإشعارات التي ترغب في تلقيها",
+      "email": "إشعارات البريد الإلكتروني",
+      "emailDescription": "تلقي الإشعارات عبر البريد الإلكتروني",
+      "alarms": "إشعارات الإنذار",
+      "alarmsDescription": "الحصول على إشعار عند حدوث إنذارات جديدة",
+      "deviceStatus": "تغيير حالة الأجهزة",
+      "deviceStatusDescription": "إشعار عند اتصال الأجهزة أو انقطاعها",
+      "weeklyReports": "التقارير الأسبوعية",
+      "weeklyReportsDescription": "تلقي تقارير ملخص أسبوعية",
+      "push": "إشعارات الدفع",
+      "pushDescription": "تلقي إشعارات الدفع",
+      "save": "حفظ التفضيلات"
+    },
+    "security": {
+      "title": "إعدادات الأمان",
+      "subtitle": "إدارة تفضيلات الأمان الخاصة بك",
+      "twoFactor": {
+        "title": "المصادقة الثنائية",
+        "description": "أضف طبقة إضافية من الأمان لحسابك",
+        "chooseMethod": "اختر وسيلة المصادقة الثنائية",
+        "methods": {
+          "email": "التحقق عبر البريد الإلكتروني",
+          "emailDescription": "تلقي رموز التحقق عبر البريد الإلكتروني",
+          "setupEmail": "إعداد المصادقة عبر البريد الإلكتروني",
+          "sms": "التحقق عبر الرسائل النصية (SMS)",
+          "smsDescription": "تلقي رموز التحقق عبر الرسائل النصية",
+          "setupSms": "إعداد المصادقة عبر الرسائل النصية",
+          "authenticator": "تطبيق المصادقة (Google Authenticator)",
+          "authenticatorDescription": "استخدم تطبيق المصادقة للحصول على رموز زمنية",
+          "setupAuthenticator": "إنشاء رمز QR"
+        },
+        "scanQr": "مسح رمز QR",
+        "scanQrDescription": "امسح الرمز باستخدام تطبيق Google Authenticator",
+        "manualKey": "مفتاح الإدخال اليدوي:",
+        "enterCode": "أدخل رمز التحقق",
+        "enterCodePlaceholder": "أدخل الرمز المكون من 6 أرقام",
+        "enterCodeDescription": "أدخل الرمز من تطبيق المصادقة الخاص بك",
+        "enableAuthenticator": "تفعيل المصادقة عبر التطبيق",
+        "status": {
+          "title": "الحالة",
+          "emailActive": "المصادقة عبر البريد الإلكتروني نشطة",
+          "smsActive": "المصادقة عبر الرسائل النصية نشطة",
+          "authenticatorActive": "تطبيق المصادقة نشط",
+          "active": "نشط"
+        },
+        "disabledDescription": "المصادقة الثنائية معطلة حالياً",
+        "enabling": "جاري التفعيل...",
+        "disable": {
+          "title": "تعطيل المصادقة الثنائية",
+          "description": "يرجى إدخال رمز التحقق المكون من 6 أرقام من تطبيق المصادقة لتأكيد التعطيل.",
+          "button": "تعطيل المصادقة الثنائية"
+        },
+        "enable": {
+          "title": "تفعيل المصادقة الثنائية عبر {{method}}",
+          "description": "يرجى إدخال رمز التحقق المكون من 6 أرقام المرسل إلى {{target}} لإكمال الإعداد.",
+          "authenticatorTarget": "التطبيق"
+        },
+        "resendCode": "إعادة إرسال الرمز",
+        "resending": "جاري إعادة الإرسال...",
+        "invalidCodeFormat": "تنسيق الرمز غير صالح. يرجى إدخال رمز مكون من 6 أرقام.",
+        "enterCodeRequired": "يرجى إدخال رمز التحقق المكون من 6 أرقام",
+        "verifying": "جاري التحقق..."
+      }
+    },
+    "account": {
+      "title": "إعدادات الحساب",
+      "profileDescription": "تحديث معلومات حسابك",
+      "passwordDescription": "قم بتحديث كلمة مرور حسابك للحفاظ على أمان حسابك"
+    },
+    "profile": {
+      "photo": "صورة الملف الشخصي",
+      "photoDescription": "قم بتحميل صورة جديدة لتغيير صورتك الشخصية. الحجم الموصى به: 400x400 بكسل.",
+      "changePhoto": "تغيير الصورة",
+      "removePhoto": "إزالة",
+      "invalidFileType": "يرجى اختيار ملف صورة",
+      "fileTooLarge": "يجب أن يكون حجم الملف أقل من 5 ميجابايت",
+      "avatarUpdated": "تم تحديث صورة الملف الشخصي",
+      "uploadFailed": "فشل تحميل الصورة",
+      "avatarRemoved": "تم إزالة صورة الملف الشخصي",
+      "removeFailed": "فشل إزالة الصورة"
+    },
+    "changePassword": {
+      "title": "تغيير كلمة المرور",
+      "currentPassword": "كلمة المرور الحالية",
+      "currentPasswordPlaceholder": "أدخل كلمة المرور الحالية",
+      "newPassword": "كلمة المرور الجديدة",
+      "newPasswordPlaceholder": "أدخل كلمة المرور الجديدة",
+      "confirmPassword": "تأكيد كلمة المرور الجديدة",
+      "confirmPasswordPlaceholder": "أكد كلمة المرور الجديدة",
+      "updatePassword": "تحديث كلمة المرور",
+      "updating": "جاري التحديث...",
+      "passwordRequired": "كلمة المرور مطلوبة",
+      "passwordMinLength": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+      "confirmPasswordRequired": "يرجى تأكيد كلمة المرور",
+      "passwordsDoNotMatch": "كلمات المرور غير متطابقة",
+      "passwordUpdatedSuccessfully": "تم تحديث كلمة المرور بنجاح",
+      "failedToUpdatePassword": "فشل تحديث كلمة المرور",
+      "oldPasswordIncorrect": "كلمة المرور الحالية غير صحيحة",
+      "newPasswordSameAsOld": "يجب أن تكون كلمة المرور الجديدة مختلفة عن الحالية",
+      "hidePassword": "إخفاء كلمة المرور",
+      "showPassword": "إظهار كلمة المرور"
+    },
+    "tabs": {
+      "general": "عام",
+      "notifications": "الإشعارات",
+      "security": "الأمان",
+      "account": "الحساب"
+    }
+  },
+  "subscriptions": {
+    "title": "إدارة خطط الاشتراك",
+    "description": "اختر الخطة المثالية لدعم نمو عملك. أدر اشتراكاتك بسهولة وابقَ متحكماً.",
+    "badge": "الاشتراك",
+    "currentPlan": {
+      "title": "الخطة الحالية:",
+      "active": "نشط",
+      "nextBilling": "تاريخ الفاتورة القادمة: {{date}}"
+    },
+    "billing": {
+      "monthly": "شهرياً",
+      "yearly": "سنوياً",
+      "savePercent": "وفر 17%"
+    },
+    "plans": {
+      "freeBadge": "مجاني",
+      "proBadge": "احترافي",
+      "advanceBadge": "متقدم",
+      "month": "/شهرياً",
+      "priceLabel": "$",
+      "nameSuffix": "خطة"
+    },
+    "actions": {
+      "currentPlan": "الخطة الحالية",
+      "upgrade": "ترقية الخطة",
+      "subscribe": "اشتراك"
+    },
+    "comparison": {
+      "title": "مقارنة الميزات",
+      "subtitle": "قارن الميزات عبر جميع الخطط جنباً إلى جنب",
+      "featureHeader": "الميزة",
+      "features": {
+        "devices": "الأجهزة",
+        "assets": "الأصول",
+        "users": "المستخدمين",
+        "apiCalls": "طلبات API",
+        "dataRetention": "الاحتفاظ بالبيانات",
+        "ruleChains": "سلاسل القواعد"
+      }
+    },
+    "features": {
+      "unlimited": "غير محدود",
+      "upToDevices": "حتى {{count}} أجهزة",
+      "unlimitedDevices": "أجهزة غير محدودة",
+      "upToUsers": "حتى {{count}} مستخدمين",
+      "unlimitedUsers": "مستخدمين غير محدودين",
+      "realtimeAnalytics": "تحليلات في الوقت الفعلي",
+      "advancedAutomation": "أتمتة متقدمة وسلاسل قواعد",
+      "ruleEngine": "محرك قواعد {{type}}",
+      "unlimitedIntegrations": "تكاملات مخصصة غير محدودة",
+      "upToIntegrations": "حتى {{count}} تكاملات مخصصة",
+      "whiteLabel": "علامة تجارية بيضاء بمستوى {{level}}",
+      "support": "دعم {{level}}",
+      "dataRetention": "الاحتفاظ بالبيانات لمدة {{days}}",
+      "storage": "حد تخزين {{gb}} جيجابايت",
+      "multiTenancy": "متعدد المستأجرين",
+      "customerManagement": "إدارة العملاء",
+      "roleBasedAccess": "التحكم في الوصول القائم على الأدوار",
+      "auditLogs": "سجلات التدقيق",
+      "backupRecovery": "النسخ الاحتياطي والاسترداد",
+      "geofencing": "السياج الجغرافي",
+      "dataAggregation": "تجميع البيانات",
+      "units": {
+        "day": "يوم",
+        "days": "أيام",
+        "year": "سنة",
+        "years": "سنوات"
+      }
+    },
+    "messages": {
+      "currentPlanError": "هذه هي خطتك الحالية",
+      "subscribeSuccess": "تم الاشتراك في الخطة بنجاح",
+      "subscribeError": "فشل الاشتراك في الخطة",
+      "planDescription": "خطة {{name}} لاحتياجات عملك"
+    }
+  },
+  "errors": {
+    "generic": "حدث خطأ",
+    "notFound": "غير موجود",
+    "unauthorized": "غير مصرح",
+    "serverError": "خطأ في الخادم",
+    "networkError": "خطأ في الشبكة"
+  },
+  "success": {
+    "created": "تم الإنشاء بنجاح",
+    "updated": "تم التحديث بنجاح",
+    "deleted": "تم الحذف بنجاح",
+    "saved": "تم الحفظ بنجاح"
+  },
+  "audit": {
+    "title": "سجلات التدقيق",
+    "subtitle": "تتبع جميع أنشطة النظام وتغييراته",
+    "totalEvents": "إجمالي الأحداث",
+    "inLast30Days": "في آخر 30 يوماً",
+    "activeUsers": "المستخدمون النشطون",
+    "currentlyOnline": "متصل حالياً",
+    "recentActivity": "النشاط الأخير",
+    "table": {
+      "action": "الإجراء",
+      "entityType": "نوع الكيان",
+      "entityName": "اسم الكيان",
+      "user": "المستخدم",
+      "timestamp": "الطابع الزمني",
+      "status": "الحالة",
+      "success": "نجاح",
+      "failed": "فشل"
+    }
+  },
+  "overview2": {
+    "title": "نظرة عامة",
+    "recentActivities": {
+      "title": "الأنشطة الأخيرة",
+      "viewAll": "إظهار كافة سجلات الأنشطة",
+      "addedCustomer": "أضاف عميلاً جديداً",
+      "updatedConfig": "حدث تكوين الجهاز",
+      "resolvedAlarm": "تم حل المنبه #A-1024",
+      "minsAgo": "منذ {{count}} دقائق",
+      "hourAgo": "منذ {{count}} ساعة"
+    },
+    "quickActions": {
+      "title": "إجراءات سريعة",
+      "addDevice": "إضافة جهاز",
+      "setAlarmRule": "ضبط قاعدة التنبيه",
+      "createDashboard": "إنشاء لوحة التحكم",
+      "importData": "استيراد البيانات",
+      "configureRuleEngine": "تكوين محرك القواعد",
+      "inviteUser": "دعوة مستخدم"
+    },
+    "trends": {
+      "title": "تحليلات اتجاهات الأجهزة",
+      "days": "{{count}} يوم"
+    },
+    "liveData": {
+      "title": "نظرة عامة على البيانات الحية",
+      "metrics": {
+        "temperature": "درجة الحرارة",
+        "humidity": "الرطوبة",
+        "occupancy": "الإشغال",
+        "co2": "مستويات ثاني أكسيد الكربون"
+      }
+    },
+    "documentation": {
+      "title": "مساعدة التوثيق",
+      "gettingStarted": "دليل البدء",
+      "apiReference": "مرجع API",
+      "alarmRules": "إعداد قواعد التنبيه",
+      "faqs": "الأسئلة الشائعة والدروس"
+    },
+    "onboarding": {
+      "title": "دليل البدء",
+      "addDevice": "إضافة جهاز",
+      "connectGateway": "توصيل البوابة الخاصة بك",
+      "buildDashboard": "بناء أول لوحة تحكم",
+      "setUpAlarms": "إعداد التنبيهات",
+      "progress": "التقدم"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "تسجيل الدخول",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "اسم المستخدم أو البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "كلمة المرور",
+      "forgotPassword": "نسيت كلمة المرور",
+      "loginButton": "تسجيل الدخول",
+      "loggingIn": "جاري تسجيل الدخول...",
+      "emailRequired": "البريد الإلكتروني مطلوب",
+      "emailInvalid": "عنوان بريد إلكتروني غير صحيح",
+      "passwordRequired": "كلمة المرور مطلوبة",
+      "passwordMinLength": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+      "loginError": "فشل تسجيل الدخول. يرجى التحقق من بيانات الاعتماد الخاصة بك.",
+      "loginSuccess": "تم تسجيل الدخول بنجاح",
+      "loginWithGoogle": "تسجيل الدخول باستخدام Google",
+      "loginWithGithub": "تسجيل الدخول باستخدام GitHub",
+      "donthaveaccount": "ليس لديك حساب؟"
+    },
+    "register": {
+      "title": "إنشاء حساب",
+      "firstName": "الاسم الأول",
+      "firstNamePlaceholder": "الاسم الأول",
+      "firstNameMinLength": "يجب أن يكون الاسم الأول على الأقل حرفين",
+      "lastName": "اسم العائلة",
+      "lastNamePlaceholder": "اسم العائلة",
+      "lastNameMinLength": "يجب أن يكون اسم العائلة على الأقل حرفين",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "البريد الإلكتروني",
+      "emailInvalid": "عنوان بريد إلكتروني غير صحيح",
+      "mobile": "رقم الجوال",
+      "mobilePlaceholder": "رقم الهاتف",
+      "mobileRequired": "رقم الجوال مطلوب",
+      "mobileInvalid": "يرجى إدخال رقم هاتف صحيح",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "كلمة المرور",
+      "passwordRequired": "كلمة المرور مطلوبة",
+      "passwordMinLength": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+      "passwordRequiresLowercase": "يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل",
+      "passwordRequiresUppercase": "يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل",
+      "passwordRequiresNumber": "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل",
+      "passwordRequiresSpecialChar": "يجب أن تحتوي كلمة المرور على حرف خاص واحد على الأقل",
+      "passwordInvalid": "كلمة المرور لا تستوفي المتطلبات",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "acceptTerms": "أوافق على الشروط والأحكام",
+      "acceptTermsError": "يجب الموافقة على الشروط والأحكام",
+      "registerButton": "إنشاء حساب",
+      "registering": "جاري إنشاء الحساب...",
+      "alreadyHaveAccount": "هل لديك حساب بالفعل؟",
+      "signIn": "تسجيل الدخول",
+      "signUpWithGoogle": "التسجيل باستخدام Google",
+      "signUpWithApple": "التسجيل باستخدام Apple",
+      "signUpWithGithub": "التسجيل باستخدام Github"
+    },
+    "forgotPassword": {
+      "title": "نسيت كلمة المرور",
+      "description": "أدخل عنوان بريدك الإلكتروني وسنرسل لك رابطًا لإعادة تعيين كلمة المرور.",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "عنوان البريد الإلكتروني",
+      "emailInvalid": "عنوان بريد إلكتروني غير صحيح",
+      "resetPassword": "إعادة تعيين كلمة المرور",
+      "sendResetLink": "إرسال رابط إعادة التعيين",
+      "sending": "جاري الإرسال...",
+      "backToLogin": "العودة إلى تسجيل الدخول",
+      "backToSignIn": "العودة إلى تسجيل الدخول",
+      "passwordResetLinkSent": "تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني",
+      "failedToSendResetLink": "فشل إرسال رابط إعادة التعيين"
+    },
+    "checkEmail": {
+      "title": "تحقق من بريدك الإلكتروني",
+      "description": "لقد أرسلنا لك رابط إعادة تعيين كلمة المرور",
+      "instruction": "لقد أرسلنا رابط إعادة تعيين كلمة المرور إلى {{email}}",
+      "dontReceiveEmail": "لم تستلم البريد الإلكتروني؟",
+      "clickToResend": "انقر لإعادة الإرسال",
+      "resending": "جاري إعادة الإرسال...",
+      "backToLogin": "العودة إلى تسجيل الدخول",
+      "resendSuccess": "تم إرسال رابط إعادة تعيين كلمة المرور بنجاح",
+      "resendError": "فشل إعادة إرسال رابط إعادة التعيين"
+    },
+    "resetPassword": {
+      "title": "نسيت كلمة المرور",
+      "instruction": "أدخل كلمة المرور الجديدة أدناه",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "كلمة المرور",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "confirmPasswordPlaceholder": "تأكيد كلمة المرور",
+      "updatePassword": "تحديث كلمة المرور",
+      "updating": "جاري التحديث...",
+      "backToSignUp": "العودة إلى التسجيل",
+      "passwordMinLength": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+      "confirmPasswordRequired": "يرجى تأكيد كلمة المرور",
+      "passwordsDoNotMatch": "كلمات المرور غير متطابقة",
+      "passwordUpdatedSuccessfully": "تم تحديث كلمة المرور بنجاح",
+      "failedToUpdatePassword": "فشل تحديث كلمة المرور"
+    },
+    "accountBlocked": {
+      "title": "حسابك محظور",
+      "description": "تم حظر الحساب مؤقتاً",
+      "message": "لقد أدخلت كلمة مرور غير صحيحة عدة مرات وتم حظر حسابك لمدة 24 ساعة، يرجى الاتصال بدردشة الدعم بخصوص هذه المشكلة",
+      "openSupportChat": "فتح دردشة الدعم"
+    },
+    "verifyAccount": {
+      "title": "تحقق من حسابك",
+      "description": "أدخل بريدك الإلكتروني ورمز الهاتف للتحقق من حسابك",
+      "emailPlaceholder": "عنوان البريد الإلكتروني",
+      "phoneCodePlaceholder": "رمز الهاتف",
+      "sendCode": "إرسال الرمز",
+      "sending": "جاري الإرسال...",
+      "backToLogin": "العودة إلى تسجيل الدخول",
+      "emailRequired": "البريد الإلكتروني مطلوب",
+      "emailInvalid": "عنوان بريد إلكتروني غير صحيح",
+      "phoneCodeRequired": "رمز الهاتف مطلوب",
+      "codeSentSuccessfully": "تم إرسال رمز التحقق بنجاح",
+      "failedToSendCode": "فشل إرسال رمز التحقق"
+    },
+    "pinCodeVerification": {
+      "title": "أدخل الرمز المكون من  6 أرقام",
+      "description": "أدخل الرمز المكون من 6 أرقام الذي استلمته على هاتفك",
+      "verifyCode": "إرسال الرمز",
+      "verifying": "جاري التحقق...",
+      "backToLogin": "العودة إلى تسجيل الدخول",
+      "dontReceiveCode": "لم تستلم الرمز؟",
+      "clickToResend": "انقر لإعادة الإرسال",
+      "digitInput": "الرقم {{number}}",
+      "invalidCode": "يرجى إدخال رمز مكون من 4 أرقام صحيح",
+      "codeVerifiedSuccessfully": "تم التحقق من الرمز بنجاح",
+      "failedToVerifyCode": "فشل التحقق من الرمز",
+      "codeResentSuccessfully": "تم إعادة إرسال رمز التحقق بنجاح"
+    },
+    "selectRole": {
+      "title": "يرجى اختيار دورك",
+      "description": "اختر دورك للمتابعة",
+      "owner": "مالك",
+      "employee": "موظف",
+      "submit": "إرسال",
+      "submitting": "جاري الإرسال...",
+      "backToSignUp": "العودة إلى التسجيل",
+      "roleRequired": "يرجى اختيار دور",
+      "roleSelectedSuccessfully": "تم اختيار الدور بنجاح",
+      "failedToSelectRole": "فشل اختيار الدور"
+    }
+  },
+  "CommonPrifleSchema": {
+    "name": "يجب أن يحتوي الاسم على حرفين على الأقل",
+    "invalidPhone": "رقم الهاتف غير صالح"
+  },
+  "automation": {
+    "title": "الأتمتة",
+    "description": "إنشاء سير عمل آلي وتفاعلات الأجهزة",
+    "buttons": {
+      "create": "إنشاء أتمتة",
+      "cancel": "إلغاء",
+      "save": "حفظ التغييرات",
+      "duplicate": "تكرار",
+      "delete": "حذف",
+      "edit": "تعديل",
+      "enable": "تفعيل",
+      "disable": "تعطيل"
+    },
+    "stats": {
+      "total": "إجمالي الأتمتة",
+      "totalDesc": "القواعد المكونة",
+      "active": "نشط",
+      "activeDesc": "قيد التشغيل حالياً",
+      "executions": "إجمالي التنفيذات",
+      "executionsDesc": "في كل الأوقات",
+      "errors": "أخطاء",
+      "errorsDesc": "تحتاج للانتباه"
+    },
+    "table": {
+      "title": "قواعد الأتمتة",
+      "searchPlaceholder": "البحث في الأتمتة...",
+      "columns": {
+        "name": "الاسم",
+        "trigger": "المشغل",
+        "action": "الإجراء",
+        "executions": "التنفيذات",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      },
+      "noResults": "لم يتم العثور على أتمتة."
+    },
+    "dialog": {
+      "createTitle": "إنشاء أتمتة",
+      "editTitle": "تعديل الأتمتة",
+      "description": "تحديد المشغلات والإجراءات للأتمتة الخاصة بك",
+      "sections": {
+        "basic": "المعلومات الأساسية",
+        "trigger": "المشغل (متى)",
+        "action": "الإجراء (ثم)",
+        "options": "خيارات"
+      },
+      "fields": {
+        "name": "اسم الأتمتة *",
+        "namePlaceholder": "مثال، التحكم في درجة الحرارة",
+        "description": "الوصف",
+        "descriptionPlaceholder": "صف ما تفعله هذه الأتمتة...",
+        "triggerType": "نوع المشغل *",
+        "device": "تحديد الجهاز *",
+        "attribute": "السمة",
+        "operator": "المعامل",
+        "value": "القيمة",
+        "actionType": "نوع الإجراء *",
+        "targetDevice": "الجهاز المستهدف *",
+        "command": "الأمر *",
+        "enable": "تفعيل الأتمتة",
+        "enableDesc": "بدء الأتمتة على الفور",
+        "log": "تفعيل التسجيل",
+        "logDesc": "تسجيل كافة التنفيذات"
+      },
+      "options": {
+        "triggerType": {
+          "threshold": "حد الجهاز",
+          "state": "تغيير حالة الجهاز",
+          "schedule": "جدول زمني",
+          "event": "حدث مخصص"
+        },
+        "operator": {
+          "greater": "> أكبر من",
+          "less": "< أصغر من",
+          "equals": "= يساوي",
+          "notEquals": "!= لا يساوي"
+        },
+        "actionType": {
+          "control": "التحكم في الجهاز",
+          "setValue": "تعيين قيمة السمة",
+          "notification": "إرسال إشعار",
+          "webhook": "استدعاء Webhook"
+        },
+        "command": {
+          "on": "تشغيل",
+          "off": "إيقاف",
+          "toggle": "تبديل",
+          "custom": "قيمة مخصصة"
+        }
+      }
+    }
+  },
+  "alertAnalytics": {
+    "title": "تحليلات التنبيهات",
+    "searchPlaceholder": "البحث في القواعد...",
+    "createRule": "إنشاء قاعدة",
+    "criticalAlerts": "التنبيهات الحرجة",
+    "warningAlerts": "تنبيهات التحذير",
+    "infoAlerts": "تنبيهات المعلومات",
+    "resolvedToday": "تم حلها اليوم",
+    "fromYesterday": "{{amount}} من أمس",
+    "trendsTitle": "اتجاهات التنبيهات (آخر 7 أيام)",
+    "legend": {
+      "critical": "تحذير حرج",
+      "warning": "تحذير",
+      "info": "معلومات"
+    },
+    "topSources": "أهم مصادر التنبيهات",
+    "responseTime": "وقت الاستجابة",
+    "avg": "المتوسط",
+    "critical": "حرج",
+    "minutes": "دقائق",
+    "alertsCount": "{{count}} تنبيه"
+  },
+  "sharing": {
+    "title": "مركز المشاركة",
+    "description": "إدارة لوحات المعلومات والأجهزة والتقارير المشتركة",
+    "actions": {
+      "shareResource": "مشاركة مورد"
+    },
+    "stats": {
+      "totalShares": "إجمالي المشاركات",
+      "activeItems": "العناصر المشتركة النشطة",
+      "publicLinks": "الروابط العامة",
+      "publiclyAccessible": "يمكن الوصول إليها علنًا",
+      "totalViews": "إجمالي المشاهدات",
+      "allTimeViews": "مشاهدات جميع الأوقات",
+      "activeUsers": "المستخدمون النشطون",
+      "withAccess": "لديهم وصول"
+    },
+    "searchPlaceholder": "البحث في العناصر المشتركة...",
+    "tabs": {
+      "sharedByMe": "شاركتها أنا",
+      "sharedWithMe": "شاركت معي",
+      "publicLinks": "روابط عامة"
+    },
+    "content": {
+      "sharedByYou": {
+        "title": "العناصر التي شاركتها",
+        "description": "لوحات المعلومات والأجهزة والتقارير التي شاركتها"
+      },
+      "sharedWithYou": {
+        "title": "العناصر التي شوركت معك",
+        "description": "الموارد التي شاركها الآخرون معك"
+      },
+      "publicLinks": {
+        "title": "روابط عامة",
+        "description": "موارد مشتركة يمكن الوصول إليها علنًا"
+      }
+    },
+    "table": {
+      "sharedWith": "شورك مع",
+      "access": "الوصول",
+      "views": "المشاهدات",
+      "sharedDate": "تاريخ المشاركة",
+      "expires": "ينتهي في",
+      "actions": {
+        "copyLink": "نسخ الرابط",
+        "revokeAccess": "إلغاء الوصول"
+      }
+    },
+    "dialog": {
+      "title": "مشاركة مورد",
+      "description": "مشاركة لوحات المعلومات أو الأجهزة أو التقارير مع أعضاء الفريق أو إنشاء روابط عامة",
+      "shareViaEmail": "مشاركة عبر البريد الإلكتروني",
+      "createPublicLink": "إنشاء رابط عام",
+      "selectResource": "اختر المورد",
+      "chooseResourcePlaceholder": "اختر ما تريد مشاركته",
+      "emailAddresses": "عناوين البريد الإلكتروني",
+      "emailPlaceholder": "user@example.com (افصل بفاصلة للمتعدد)",
+      "accessLevel": "مستوى الوصول",
+      "accessLevels": {
+        "viewOnly": "عرض فقط",
+        "canEdit": "يمكنه التعديل",
+        "admin": "مسؤول"
+      },
+      "publicLink": "الرابط العام",
+      "anyoneWithLink": "يمكن لأي شخص لديه الرابط العرض",
+      "expiration": "انتهاء الرابط (اختياري)",
+      "neverExpires": "لا تنتهي أبداً",
+      "message": "الرسالة (اختياري)",
+      "messagePlaceholder": "أضف رسالة للمستلم...",
+      "sendInvitation": "إرسال دعوة",
+      "createLink": "إنشاء رابط"
+    }
+  }
+}

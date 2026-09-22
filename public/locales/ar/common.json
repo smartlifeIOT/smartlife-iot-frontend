@@ -1,0 +1,50 @@
+{
+  "app": {
+    "name": "منصة إنترنت الأشياء",
+    "description": "منصة إدارة إنترنت الأشياء للمؤسسات"
+  },
+  "navigation": {
+    "dashboard": "لوحة التحكم",
+    "devices": "الأجهزة",
+    "assets": "الأصول",
+    "rules": "سلاسل القواعد",
+    "users": "المستخدمون",
+    "tenants": "المستأجرون",
+    "alarms": "التنبيهات",
+    "settings": "الإعدادات"
+  },
+  "actions": {
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "add": "إضافة",
+    "search": "بحث",
+    "filter": "تصفية",
+    "export": "تصدير",
+    "import": "استيراد",
+    "refresh": "تحديث",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "close": "إغلاق",
+    "confirm": "تأكيد"
+  },
+  "status": {
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "online": "متصل",
+    "offline": "غير متصل",
+    "pending": "قيد الانتظار",
+    "error": "خطأ",
+    "success": "نجاح",
+    "warning": "تحذير"
+  },
+  "messages": {
+    "loading": "جاري التحميل...",
+    "noData": "لا توجد بيانات متاحة",
+    "error": "حدث خطأ",
+    "success": "تمت العملية بنجاح",
+    "confirmDelete": "هل أنت متأكد من حذف هذا العنصر؟"
+  }
+}
