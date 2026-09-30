@@ -63,7 +63,7 @@ export default function APILogsPage() {
   const [isDetailsOpen, setIsDetailsOpen] = useState<boolean>(false);
   const [copiedField, setCopiedField] = useState<string | null>(null);
 
-  // Query API with pagination params
+  // Query API with pagination paramsass
   const {
     data: rawResponse,
     isLoading,
@@ -94,7 +94,7 @@ export default function APILogsPage() {
         hasNextPage: false,
         hasPreviousPage: false,
       };
-
+    // wokin
     return { logsList: list, meta: pagination };
   }, [rawResponse]);
 
