@@ -40,6 +40,7 @@ import {
   AlertTriangle,
   Plus,
   Bot,
+  ShieldCheck,
 } from 'lucide-react';
 import { useThemeStore } from '@/stores/useThemeStore';
 import { useAppStore } from '@/stores/useAppStore';
@@ -372,6 +373,16 @@ const getNavItems = (): NavItem[] => [
         titleKey: 'nav.rateLimitingDashboard',
         href: '/reports-apis/rate-limiting',
         icon: <Activity className="h-4 w-4" />,
+      },
+      {
+        titleKey: 'nav.apiHealth',
+        href: '/reports-apis/health',
+        icon: <ShieldCheck className="h-4 w-4" />,
+      },
+      {
+        titleKey: 'nav.apiLogs',
+        href: '/reports-apis/logs',
+        icon: <FileText className="h-4 w-4" />,
       },
     ],
   },

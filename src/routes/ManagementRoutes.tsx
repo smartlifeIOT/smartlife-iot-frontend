@@ -83,6 +83,12 @@ const APIResponseOverview = Loadable(
 const RateLimitingDashboard = Loadable(
   lazy(() => import('@/features/apiMonitoring/page/RateLimitingDashboardPage'))
 );
+const APIHealth = Loadable(
+  lazy(() => import('@/features/apiMonitoring/page/APIHealthPage'))
+);
+const APILogs = Loadable(
+  lazy(() => import('@/features/apiMonitoring/page/APILogsPage'))
+);
 
 const DataConvertersPage = Loadable(
   lazy(() => import('@/features/integrations/page/DataConvertersPage'))
@@ -219,7 +225,6 @@ export const managementRoutes = [
         index: true,
         element: <APIMonitoring />,
       },
-
       {
         path: 'request-analytics',
         element: <RequestAnalytics />,
@@ -239,6 +244,18 @@ export const managementRoutes = [
       {
         path: 'rate-limiting',
         element: <RateLimitingDashboard />,
+      },
+      {
+        path: 'health',
+        element: <APIHealth />,
+      },
+      {
+        path: 'api-health',
+        element: <APIHealth />,
+      },
+      {
+        path: 'logs',
+        element: <APILogs />,
       },
     ],
   },

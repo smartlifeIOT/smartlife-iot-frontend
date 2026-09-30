@@ -118,6 +118,8 @@
     "errorAnalysis": "Error Analysis",
     "apiResponseOverview": "API Response  ",
     "rateLimitingDashboard": "Rate Limiting Dashboard",
+    "apiHealth": "API Health",
+    "apiLogs": "API Logs",
     "alertConfiguration": "Alert Configuration",
     "users": "Users & Roles",
     "history": "History",

@@ -3,7 +3,23 @@ import {
   ApiLogQuery,
   TimeRange,
   apiMonitoringApi,
+  ResponseTimeByMinute,
+  ApiPerformanceData,
+  HealthStatus,
+  HealthServicesStatus,
+  HealthMemoryStatus,
+  ApiLog,
 } from '../services/api-monitoring.api';
+
+export type {
+  ResponseTimeByMinute,
+  ApiPerformanceData,
+  HealthStatus,
+  HealthServicesStatus,
+  HealthMemoryStatus,
+  ApiLog,
+  ApiLogQuery,
+};
 
 // 1. Dashboard
 export const useGetApiDashboard = () => {
@@ -137,6 +153,9 @@ export const useGetHealth = () => {
   });
   return { data, isLoading, isError, refetch };
 };
+
+// Alias for convenience
+export const useGetApiHealth = useGetHealth;
 
 // 12. My Logs
 export const useGetMyLogs = (params?: ApiLogQuery) => {

@@ -16,18 +16,31 @@ export interface ApiLog {
   statusCode: number;
   responseTime: number;
   userId?: string;
+  tenantId?: string;
+  customerId?: string | null;
+  requestId?: string;
   userAgent?: string;
   ip?: string;
   ipAddress?: string;
   userRole?: string;
-  errorMessage?: string;
-  error?: string;
-  errorStack?: string | null;
+  requestSize?: number;
+  responseSize?: number;
+  request?: any;
+  response?: any;
   requestBody?: Record<string, unknown>;
   responseBody?: Record<string, unknown>;
+  errorMessage?: string | null;
+  error?: string;
+  errorStack?: string | null;
   isError?: boolean;
+  metadata?: Record<string, any>;
   timestamp?: string;
   createdAt: string;
+  updatedAt?: string;
+  deletedAt?: string | null;
+  createdBy?: string | null;
+  updatedBy?: string | null;
+  deletedBy?: string | null;
 }
 
 export interface RequestByEndpointStat {
@@ -47,13 +60,26 @@ export interface ApiMetrics {
   requestsByMethod: Record<string, number>;
 }
 
+export interface HealthServicesStatus {
+  database: 'healthy' | 'degraded' | 'unhealthy' | string;
+  cache: 'healthy' | 'degraded' | 'unhealthy' | string;
+  messageQueue: 'healthy' | 'degraded' | 'unhealthy' | string;
+}
+
+export interface HealthMemoryStatus {
+  heapUsedMB: number;
+  rssMB: number;
+}
+
 export interface HealthStatus {
-  status: 'healthy' | 'degraded' | 'unhealthy';
-  uptime: number;
-  database: boolean;
-  cache: boolean;
-  queue: boolean;
+  status: 'healthy' | 'degraded' | 'unhealthy' | string;
   timestamp: string;
+  services?: HealthServicesStatus;
+  uptime: number;
+  memory?: HealthMemoryStatus;
+  database?: boolean | string;
+  cache?: boolean | string;
+  queue?: boolean | string;
 }
 
 export interface ApiLogQuery {
@@ -151,6 +177,18 @@ export interface ApiStats {
   slowestEndpoints: SlowestEndpointStat[];
 }
 
+export interface ResponseTimeByMinute {
+  time: string;
+  avgResponseTime: number;
+  maxResponseTime: number;
+  requests: number;
+  errors: number;
+}
+
+export interface ApiPerformanceData {
+  responseTimesByMinute: ResponseTimeByMinute[];
+}
+
 export interface PaginatedResponse<T> {
   message?: string;
   success?: boolean;
@@ -206,11 +244,11 @@ export const apiMonitoringApi = {
 
   // GET /api-monitoring/performance - Per-minute performance for chart
   getPerformance: () =>
-    apiClient.get<ApiResponse<ApiMetrics>>('/api-monitoring/performance'),
+    apiClient.get<ApiResponse<ApiPerformanceData>>('/api-monitoring/performance'),
 
   // Alias for backward compatibility
   getAPiperfomance: () =>
-    apiClient.get<ApiResponse<ApiMetrics>>('/api-monitoring/performance'),
+    apiClient.get<ApiResponse<ApiPerformanceData>>('/api-monitoring/performance'),
 
   // GET /api-monitoring/errors - Get error logs (status >= 400)
   getErrors: (params?: ApiLogQuery) =>

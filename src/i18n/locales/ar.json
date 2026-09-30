@@ -131,6 +131,8 @@
     "auditLogs": "سجلات التدقيق",
     "errorAnalysis": "تحليل الأخطاء",
     "rateLimitingDashboard": "لوحة تحكم تحديد المعدل",
+    "apiHealth": "صحة API",
+    "apiLogs": "سجلات API",
     "audit": "التدقيق",
     "activity": "النشاط",
     "subscriptionPlans": "خطط الاشتراك",

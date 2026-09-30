@@ -41,8 +41,92 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   CheckCircle2,
+  Clock,
 } from 'lucide-react';
-import { useGetAPiperfomance } from '../hooks';
+import { useGetApiPerformance, type ResponseTimeByMinute } from '../hooks';
+
+interface TooltipPayloadItem {
+  name: string;
+  value: number;
+  color: string;
+  dataKey: string;
+  payload: {
+    time: string;
+    timeLabel: string;
+    fullTime: string;
+    avgResponseTime: number;
+    maxResponseTime: number;
+    requests: number;
+    errors: number;
+  };
+}
+
+const CustomResponseTimeTooltip = ({
+  active,
+  payload,
+}: {
+  active?: boolean;
+  payload?: TooltipPayloadItem[];
+}) => {
+  if (active && payload && payload.length) {
+    const data = payload[0].payload;
+    return (
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-3 shadow-xl text-xs space-y-2 min-w-[200px]">
+        <div className="border-b border-slate-100 dark:border-slate-800 pb-1.5 flex items-center justify-between gap-2">
+          <span className="font-semibold text-slate-800 dark:text-slate-100">
+            {data.fullTime || data.timeLabel}
+          </span>
+          <span className="text-[10px] text-slate-400 font-mono">
+            {data.timeLabel}
+          </span>
+        </div>
+
+        <div className="space-y-1.5">
+          <div className="flex items-center justify-between gap-4">
+            <span className="flex items-center gap-1.5 text-slate-600 dark:text-slate-300">
+              <span className="h-2.5 w-2.5 rounded-full bg-[#44489d]" />
+              Avg Response:
+            </span>
+            <span className="font-bold text-slate-900 dark:text-slate-50">
+              {data.avgResponseTime}ms
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between gap-4">
+            <span className="flex items-center gap-1.5 text-slate-600 dark:text-slate-300">
+              <span className="h-2.5 w-2.5 rounded-full bg-[#f59e0b]" />
+              Max Response:
+            </span>
+            <span className="font-bold text-amber-600 dark:text-amber-400">
+              {data.maxResponseTime}ms
+            </span>
+          </div>
+
+          <div className="pt-1.5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-4 text-slate-500 dark:text-slate-400">
+            <span>Requests:</span>
+            <span className="font-semibold text-slate-700 dark:text-slate-200">
+              {data.requests}
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between gap-4 text-slate-500 dark:text-slate-400">
+            <span>Errors:</span>
+            <span
+              className={`font-semibold ${
+                data.errors > 0
+                  ? 'text-rose-600 dark:text-rose-400'
+                  : 'text-emerald-600 dark:text-emerald-400'
+              }`}
+            >
+              {data.errors}
+            </span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  return null;
+};
 
 interface EndpointMetric {
   id: string;
@@ -103,16 +187,6 @@ const endpointMetrics: EndpointMetric[] = [
   },
 ];
 
-const responseTimeData = [
-  { day: 'MONDAY', current: 120, previous: 200 },
-  { day: 'TUESDAY', current: 150, previous: 180 },
-  { day: 'WEDNESDAY', current: 300, previous: 200 },
-  { day: 'THURSDAY', current: 280, previous: 170 },
-  { day: 'FRIDAY', current: 240, previous: 300 },
-  { day: 'SATURDAY', current: 150, previous: 400 },
-  { day: 'SUNDAY', current: 360, previous: 250 },
-];
-
 const throughputData = [
   { time: 'M', value: 100 },
   { time: 'T', value: 240 },
@@ -135,19 +209,124 @@ export default function PerformanceMetricsPage() {
   const [timeRange, setTimeRange] = useState('7d');
   const [isRefreshing, setIsRefreshing] = useState(false);
 
-  const handleRefresh = () => {
+  const {
+    data: apiPerfomance,
+    isLoading: isLoadingPerformance,
+    isError: isErrorPerformance,
+    refetch: refetchPerformance,
+  } = useGetApiPerformance();
+
+  const handleRefresh = async () => {
     setIsRefreshing(true);
-    setTimeout(() => {
-      setIsRefreshing(false);
-    }, 800);
+    try {
+      await refetchPerformance();
+    } catch (err) {
+      console.error('Failed to refresh performance data:', err);
+    } finally {
+      setTimeout(() => {
+        setIsRefreshing(false);
+      }, 500);
+    }
   };
 
   const handleExport = (format: string) => {
     console.log(`Exporting data as ${format}`);
   };
 
-  const { data: apiPerfomance } = useGetAPiperfomance();
-  console.log(apiPerfomance);
+  // Safely extract responseTimesByMinute array
+  const responseTimesData: ResponseTimeByMinute[] = React.useMemo(() => {
+    if (!apiPerfomance) return [];
+    if (Array.isArray(apiPerfomance.responseTimesByMinute)) {
+      return apiPerfomance.responseTimesByMinute;
+    }
+    if (Array.isArray((apiPerfomance as any)?.data?.responseTimesByMinute)) {
+      return (apiPerfomance as any).data.responseTimesByMinute;
+    }
+    if (Array.isArray(apiPerfomance)) {
+      return apiPerfomance as any;
+    }
+    return [];
+  }, [apiPerfomance]);
+
+  // Transform data for recharts
+  const formattedChartData = React.useMemo(() => {
+    if (!responseTimesData || responseTimesData.length === 0) {
+      return [];
+    }
+
+    return responseTimesData.map((item) => {
+      const date = new Date(item.time);
+      const isValid = !isNaN(date.getTime());
+
+      // Label for X-axis (e.g., 09:54)
+      const timeLabel = isValid
+        ? date.toLocaleTimeString([], {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false,
+          })
+        : item.time;
+
+      // Detailed timestamp for tooltip (e.g., Sep 27, 09:54:00)
+      const fullTime = isValid
+        ? date.toLocaleString([], {
+            month: 'short',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false,
+          })
+        : item.time;
+
+      return {
+        ...item,
+        timeLabel,
+        fullTime,
+      };
+    });
+  }, [responseTimesData]);
+
+  // Calculate statistics from real API response
+  const performanceStats = React.useMemo(() => {
+    if (!responseTimesData || responseTimesData.length === 0) {
+      return {
+        avgResponseTime: null,
+        maxResponseTime: null,
+        totalRequests: 0,
+        totalErrors: 0,
+      };
+    }
+
+    const totalRequests = responseTimesData.reduce(
+      (sum, item) => sum + (item.requests || 0),
+      0
+    );
+    const totalErrors = responseTimesData.reduce(
+      (sum, item) => sum + (item.errors || 0),
+      0
+    );
+    const totalWeightedTime = responseTimesData.reduce(
+      (sum, item) => sum + item.avgResponseTime * (item.requests || 1),
+      0
+    );
+    const totalWeight = responseTimesData.reduce(
+      (sum, item) => sum + (item.requests || 1),
+      0
+    );
+    const avgResponseTime = Math.round(totalWeightedTime / (totalWeight || 1));
+    const maxResponseTime = Math.max(
+      ...responseTimesData.map((item) => item.maxResponseTime || 0)
+    );
+
+    return {
+      avgResponseTime,
+      maxResponseTime,
+      totalRequests,
+      totalErrors,
+    };
+  }, [responseTimesData]);
+
   return (
     <div className="space-y-6 pb-12">
       {/* Top Header & Actions Section */}
@@ -206,10 +385,18 @@ export default function PerformanceMetricsPage() {
             <p className="text-sm font-medium tracking-wide ">
               Avg Response Time
             </p>
-            <p className="mt-3 text-3xl font-semibold ">127ms</p>
+            <p className="mt-3 text-3xl font-semibold ">
+              {performanceStats.avgResponseTime !== null
+                ? `${performanceStats.avgResponseTime}ms`
+                : '127ms'}
+            </p>
             <div className="mt-3 flex items-center gap-1.5  ">
               <ArrowUpRight className="h-4 w-4" />
-              <span className="text-xs font-medium">12.5% vs last period</span>
+              <span className="text-xs font-medium">
+                {responseTimesData.length > 0
+                  ? `Across ${responseTimesData.length} min samples`
+                  : '12.5% vs last period'}
+              </span>
             </div>
           </CardContent>
         </Card>
@@ -226,16 +413,24 @@ export default function PerformanceMetricsPage() {
           </CardContent>
         </Card>
 
-        {/* Soft Yellow Card - P95 R esponse Time */}
+        {/* Soft Yellow Card - Peak / P95 Response Time */}
         <Card className=" bg-success text-white ">
           <CardContent className="p-6">
             <p className="text-sm font-medium tracking-wide ">
-              P95 Response Time
+              Peak Response Time
             </p>
-            <p className="mt-3 text-3xl font-medium ">289ms</p>
+            <p className="mt-3 text-3xl font-medium ">
+              {performanceStats.maxResponseTime !== null
+                ? `${performanceStats.maxResponseTime}ms`
+                : '289ms'}
+            </p>
             <div className="mt-3 flex items-center gap-1.5 ">
               <ArrowDownRight className="h-4 w-4" />
-              <span className="text-xs font-medium">0.5% vs last period</span>
+              <span className="text-xs font-medium">
+                {responseTimesData.length > 0
+                  ? `Max in window (${performanceStats.totalRequests} reqs)`
+                  : '0.5% vs last period'}
+              </span>
             </div>
           </CardContent>
         </Card>
@@ -258,74 +453,152 @@ export default function PerformanceMetricsPage() {
       {/* Response Time Trends & Throughput Side-by-Side Charts */}
       <div className="grid gap-6 lg:grid-cols-2">
         {/* Response Time Trends Card */}
-        <Card className="border border-slate-100 shadow-sm rounded-xl">
+        <Card className="border border-slate-100 shadow-sm rounded-xl dark:border-slate-800 dark:bg-slate-900">
           <CardHeader className="pb-2">
-            <CardTitle className="text-lg font-semibold text-slate-800 dark:text-slate-100">
-              Response Time Trends
-            </CardTitle>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <div>
+                <CardTitle className="text-lg font-semibold text-slate-800 dark:text-slate-100 flex items-center gap-2">
+                  <span>Response Time Trends</span>
+                  {responseTimesData.length > 0 && (
+                    <Badge
+                      variant="outline"
+                      className="text-[11px] font-medium bg-indigo-50/80 text-indigo-700 border-indigo-200 dark:bg-indigo-950/40 dark:text-indigo-300 dark:border-indigo-800"
+                    >
+                      Per-Minute
+                    </Badge>
+                  )}
+                </CardTitle>
+                <CardDescription className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                  Average vs. peak response time per minute
+                </CardDescription>
+              </div>
+
+              {responseTimesData.length > 0 && (
+                <div className="flex flex-wrap items-center gap-3 text-xs">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#f59e0b]"></span>
+                    <span className="text-slate-500 dark:text-slate-400">
+                      Peak:
+                    </span>
+                    <span className="font-semibold text-amber-600 dark:text-amber-400">
+                      {performanceStats.maxResponseTime}ms
+                    </span>
+                  </div>
+                  <div className="hidden sm:flex items-center gap-1.5 text-slate-400 dark:text-slate-500">
+                    <span>•</span>
+                    <span>{performanceStats.totalRequests} reqs</span>
+                  </div>
+                </div>
+              )}
+            </div>
           </CardHeader>
           <CardContent>
-            <div className="h-[280px] w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart
-                  data={responseTimeData}
-                  margin={{ top: 15, right: 10, left: -25, bottom: 5 }}
+            {isLoadingPerformance ? (
+              <div className="h-[280px] w-full flex flex-col items-center justify-center gap-2 text-slate-400 dark:text-slate-500">
+                <RefreshCw className="h-6 w-6 animate-spin text-[#44489d]" />
+                <span className="text-xs font-medium">
+                  Loading response time trends...
+                </span>
+              </div>
+            ) : isErrorPerformance ? (
+              <div className="h-[280px] w-full flex flex-col items-center justify-center gap-3 text-center">
+                <p className="text-sm font-medium text-rose-500">
+                  Failed to load performance metrics
+                </p>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={() => refetchPerformance()}
+                  className="h-8 text-xs gap-1.5"
                 >
-                  <CartesianGrid
-                    strokeDasharray="3 3"
-                    stroke="#f1f5f9"
-                    vertical={false}
-                  />
-                  <XAxis
-                    dataKey="day"
-                    stroke="#94a3b8"
-                    fontSize={10}
-                    tickLine={false}
-                    axisLine={false}
-                    dy={10}
-                  />
-                  <YAxis
-                    stroke="#94a3b8"
-                    fontSize={10}
-                    tickLine={false}
-                    axisLine={false}
-                    dx={-5}
-                    tickFormatter={(value) => `${value}ms`}
-                  />
-                  <Tooltip
-                    contentStyle={{
-                      backgroundColor: '#fff',
-                      border: '1px solid #e2e8f0',
-                      borderRadius: '8px',
-                      boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
-                    }}
-                    labelStyle={{
-                      fontWeight: 'bold',
-                      fontSize: '12px',
-                      color: '#1e293b',
-                    }}
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="current"
-                    name="Current Period"
-                    stroke="#44489d"
-                    strokeWidth={2}
-                    dot={{ r: 4, strokeWidth: 1 }}
-                    activeDot={{ r: 6 }}
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="previous"
-                    name="Last Period"
-                    stroke="#10b981"
-                    strokeWidth={2}
-                    dot={{ r: 4, strokeWidth: 1 }}
-                    activeDot={{ r: 6 }}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
+                  <RefreshCw className="h-3.5 w-3.5" />
+                  Try Again
+                </Button>
+              </div>
+            ) : formattedChartData.length === 0 ? (
+              <div className="h-[280px] w-full flex flex-col items-center justify-center text-center text-slate-400 dark:text-slate-500">
+                <Clock className="h-8 w-8 text-slate-300 dark:text-slate-600 mb-2" />
+                <p className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                  No response time data available
+                </p>
+                <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">
+                  Response time trends will appear here when requests are
+                  recorded.
+                </p>
+              </div>
+            ) : (
+              <div className="h-[280px] w-full">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart
+                    data={formattedChartData}
+                    margin={{ top: 15, right: 15, left: -20, bottom: 5 }}
+                  >
+                    <CartesianGrid
+                      strokeDasharray="3 3"
+                      stroke="#f1f5f9"
+                      className="dark:stroke-slate-800"
+                      vertical={false}
+                    />
+                    <XAxis
+                      dataKey="timeLabel"
+                      stroke="#94a3b8"
+                      fontSize={10}
+                      tickLine={false}
+                      axisLine={false}
+                      dy={10}
+                    />
+                    <YAxis
+                      stroke="#94a3b8"
+                      fontSize={10}
+                      tickLine={false}
+                      axisLine={false}
+                      dx={-5}
+                      tickFormatter={(value) => `${value}ms`}
+                    />
+                    <Tooltip content={<CustomResponseTimeTooltip />} />
+                    <Line
+                      type="monotone"
+                      dataKey="avgResponseTime"
+                      name="Avg Latency"
+                      stroke="#44489d"
+                      strokeWidth={2.5}
+                      dot={{
+                        r: 3,
+                        strokeWidth: 1.5,
+                        fill: '#fff',
+                        stroke: '#44489d',
+                      }}
+                      activeDot={{
+                        r: 5,
+                        fill: '#44489d',
+                        stroke: '#fff',
+                        strokeWidth: 2,
+                      }}
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="maxResponseTime"
+                      name="Max Latency"
+                      stroke="#f59e0b"
+                      strokeWidth={2}
+                      strokeDasharray="4 4"
+                      dot={{
+                        r: 3,
+                        strokeWidth: 1.5,
+                        fill: '#fff',
+                        stroke: '#f59e0b',
+                      }}
+                      activeDot={{
+                        r: 5,
+                        fill: '#f59e0b',
+                        stroke: '#fff',
+                        strokeWidth: 2,
+                      }}
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+            )}
           </CardContent>
         </Card>
 

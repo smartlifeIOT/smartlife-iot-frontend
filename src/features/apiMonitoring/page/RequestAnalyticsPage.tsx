@@ -281,7 +281,7 @@ export default function RequestAnalyticsPage() {
       </div>
 
       {/* Charts Section */}
-      <div className="grid gap-3 lg:grid-cols-[2fr_1fr]">
+      <div className="grid gap-3 lg:grid-cols-[2fr_1.5fr]">
         <Card className="border border-gray-100 shadow-sm">
           <CardHeader>
             <CardTitle>Request Volume Over Time</CardTitle>
@@ -371,3 +371,4 @@ export default function RequestAnalyticsPage() {
     </div>
   );
 }
+//
