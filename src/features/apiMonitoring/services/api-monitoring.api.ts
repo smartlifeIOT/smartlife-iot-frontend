@@ -244,11 +244,15 @@ export const apiMonitoringApi = {
 
   // GET /api-monitoring/performance - Per-minute performance for chart
   getPerformance: () =>
-    apiClient.get<ApiResponse<ApiPerformanceData>>('/api-monitoring/performance'),
+    apiClient.get<ApiResponse<ApiPerformanceData>>(
+      '/api-monitoring/performance'
+    ),
 
   // Alias for backward compatibility
   getAPiperfomance: () =>
-    apiClient.get<ApiResponse<ApiPerformanceData>>('/api-monitoring/performance'),
+    apiClient.get<ApiResponse<ApiPerformanceData>>(
+      '/api-monitoring/performance'
+    ),
 
   // GET /api-monitoring/errors - Get error logs (status >= 400)
   getErrors: (params?: ApiLogQuery) =>
