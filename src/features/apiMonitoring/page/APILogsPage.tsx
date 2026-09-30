@@ -94,7 +94,7 @@ export default function APILogsPage() {
         hasNextPage: false,
         hasPreviousPage: false,
       };
-    // wokin
+    // wokinsasdasd
     return { logsList: list, meta: pagination };
   }, [rawResponse]);
 
